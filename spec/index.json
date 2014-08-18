@@ -1,1 +1,441 @@
-{}
+{
+    "disk.{disk_name}.ioInProgres": {
+        "display_name": "disk.{disk_name}.ioInProgres",
+        "units": "number of I/Os in progress",
+        "max": "MAX_UNSIGNED_LONG",
+        "min": 0,
+        "sig_figs": null,
+        "data_type": "numeric",
+        "type": "raw",
+        "formula" : null,
+        "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.ioInProgres$",
+        "description": "The number of inputs and outputs currently in progress. Incremented as requests are submitted and decremented as they finish. This does not include requests that are in queue waiting to be submitted.",
+        "notes": {
+            "disk_type" : {
+                "dm-{disk_number}": "These are logical drives mapped by the linux kernel's logical volume manager (LVM).",
+                "loop{disk_number}": "These are loop devices used to mount filesystems not associated with block devices.",
+                "md{disk_number}": "These are Metadisk (RAID) devices. The metadisk driver is used to span a filesystem across multiple physical disks.",
+                "ram{disk_number}": "These are RAM disks",
+                "sd{disk_letter}": "These are SCSI disk devices. Disk letters range from a to p, allowing for a maximum of 16 devices.",
+                "sd{disk_letter}{partition_number}": "These are partitions on the SCSI device. The limit on partitions is 15."
+            }
+        },
+        "source": "/proc/diskstats",
+        "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.ioInProgres$",
+        "vendors": "*",
+        "classification": "disk",
+        "refs": [
+            "https://www.kernel.org/doc/Documentation/iostats.txt",
+            "https://www.kernel.org/doc/Documentation/devices.txt",
+            "http://linuxcommand.org/man_pages/iostat1.html"
+        ]
+    },
+    "disk.{disk_name}.readsIssued": {
+        "display_name": "disk.{disk_name}.readsIssued",
+        "units": "number of reads completed",
+        "max": "MAX_UNSIGNED_LONG",
+        "min": 0,
+        "sig_figs": null,
+        "data_type": "numeric",
+        "type": "raw",
+        "formula" : null,
+        "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.readsIssued$",
+        "description": "The number of reads completed successfully.",
+        "notes": {
+            "disk_type" : {
+                "dm-{disk_number}": "These are logical drives mapped by the linux kernel's logical volume manager (LVM).",
+                "loop{disk_number}": "These are loop devices used to mount filesystems not associated with block devices.",
+                "md{disk_number}": "These are Metadisk (RAID) devices. The metadisk driver is used to span a filesystem across multiple physical disks.",
+                "ram{disk_number}": "These are RAM disks",
+                "sd{disk_letter}": "These are SCSI disk devices. Disk letters range from a to p, allowing for a maximum of 16 devices.",
+                "sd{disk_letter}{partition_number}": "These are partitions on the SCSI device. The limit on partitions is 15."
+            }
+        },
+        "source": "/proc/diskstats",
+        "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.readsIssued$",
+        "vendors": "*",
+        "classification": "disk",
+        "refs": [
+            "https://www.kernel.org/doc/Documentation/iostats.txt",
+            "https://www.kernel.org/doc/Documentation/devices.txt"
+        ]
+    },
+    "disk.{disk_name}.readsMerged": {
+        "display_name": "disk.{disk_name}.readsMerged",
+        "units": "number of reads merged",
+        "max": "MAX_UNSIGNED_LONG",
+        "min": 0,
+        "sig_figs": null,
+        "data_type": "numeric",
+        "type": "raw",
+        "formula" : null,
+        "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.readsMerged$",
+        "description": "The number of adjacent reads merged for read efficiency. For example, two 4K reads may become one 8K read before it is ultimately handed to the disk, and so it will be queued (and counted) as only one I/O.",
+        "notes": {
+            "disk_type" : {
+                "dm-{disk_number}": "These are logical drives mapped by the linux kernel's logical volume manager (LVM).",
+                "loop{disk_number}": "These are loop devices used to mount filesystems not associated with block devices.",
+                "md{disk_number}": "These are Metadisk (RAID) devices. The metadisk driver is used to span a filesystem across multiple physical disks.",
+                "ram{disk_number}": "These are RAM disks",
+                "sd{disk_letter}": "These are SCSI disk devices. Disk letters range from a to p, allowing for a maximum of 16 devices.",
+                "sd{disk_letter}{partition_number}": "These are partitions on the SCSI device. The limit on partitions is 15."
+            }
+        },
+        "source": "/proc/diskstats",
+        "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.readsMerged$",
+        "vendors": "*",
+        "classification": "disk",
+        "refs": [
+            "https://www.kernel.org/doc/Documentation/iostats.txt",
+            "https://www.kernel.org/doc/Documentation/devices.txt"
+        ]
+    },
+    "disk.{disk_name}.sectorsRead": {
+        "display_name": "disk.{disk_name}.sectorsRead",
+        "units": "number of sectors read",
+        "max": "MAX_UNSIGNED_LONG",
+        "min": 0,
+        "sig_figs": null,
+        "data_type": "numeric",
+        "type": "raw",
+        "formula" : null,
+        "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.sectorsRead$",
+        "description": "The number of sectors read successfully.",
+        "notes": {
+            "disk_type" : {
+                "dm-{disk_number}": "These are logical drives mapped by the linux kernel's logical volume manager (LVM).",
+                "loop{disk_number}": "These are loop devices used to mount filesystems not associated with block devices.",
+                "md{disk_number}": "These are Metadisk (RAID) devices. The metadisk driver is used to span a filesystem across multiple physical disks.",
+                "ram{disk_number}": "These are RAM disks",
+                "sd{disk_letter}": "These are SCSI disk devices. Disk letters range from a to p, allowing for a maximum of 16 devices.",
+                "sd{disk_letter}{partition_number}": "These are partitions on the SCSI device. The limit on partitions is 15."
+            }
+        },
+        "source": "/proc/diskstats",
+        "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.sectorsRead$",
+        "vendors": "*",
+        "classification": "disk",
+        "refs": [
+            "https://www.kernel.org/doc/Documentation/iostats.txt",
+            "https://www.kernel.org/doc/Documentation/devices.txt"
+        ]
+    },
+    "disk.{disk_name}.sectorsWriten": {
+        "display_name": "disk.{disk_name}.sectorsWriten",
+        "units": "number of sectors written",
+        "max": "MAX_UNSIGNED_LONG",
+        "min": 0,
+        "sig_figs": null,
+        "data_type": "numeric",
+        "type": "raw",
+        "formula" : null,
+        "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.sectorsWriten$",
+        "description": "The number of sectors written successfully.",
+        "notes": {
+            "disk_type" : {
+                "dm-{disk_number}": "These are logical drives mapped by the linux kernel's logical volume manager (LVM).",
+                "loop{disk_number}": "These are loop devices used to mount filesystems not associated with block devices.",
+                "md{disk_number}": "These are Metadisk (RAID) devices. The metadisk driver is used to span a filesystem across multiple physical disks.",
+                "ram{disk_number}": "These are RAM disks",
+                "sd{disk_letter}": "These are SCSI disk devices. Disk letters range from a to p, allowing for a maximum of 16 devices.",
+                "sd{disk_letter}{partition_number}": "These are partitions on the SCSI device. The limit on partitions is 15."
+            }
+        },
+        "source": "/proc/diskstats",
+        "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.sectorsWriten$",
+        "vendors": "*",
+        "classification": "disk",
+        "refs": [
+            "https://www.kernel.org/doc/Documentation/iostats.txt",
+            "https://www.kernel.org/doc/Documentation/devices.txt"
+        ]
+    },
+    "disk.{disk_name}.timeDoingIO": {
+        "display_name": "disk.{disk_name}.timeDoingIO",
+        "units": "milliseconds",
+        "max": "MAX_UNSIGNED_LONG",
+        "min": 0,
+        "sig_figs": null,
+        "data_type": "time",
+        "type": "raw",
+        "formula" : null,
+        "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.timeDoingIO$",
+        "description": "The number of milliseconds spent processing IO requests, which increases when number of I/Os in progress is nonzero.",
+        "notes": {
+            "disk_type" : {
+                "dm-{disk_number}": "These are logical drives mapped by the linux kernel's logical volume manager (LVM).",
+                "loop{disk_number}": "These are loop devices used to mount filesystems not associated with block devices.",
+                "md{disk_number}": "These are Metadisk (RAID) devices. The metadisk driver is used to span a filesystem across multiple physical disks.",
+                "ram{disk_number}": "These are RAM disks",
+                "sd{disk_letter}": "These are SCSI disk devices. Disk letters range from a to p, allowing for a maximum of 16 devices.",
+                "sd{disk_letter}{partition_number}": "These are partitions on the SCSI device. The limit on partitions is 15."
+            }
+        },
+        "source": "/proc/diskstats",
+        "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.timeDoingIO$",
+        "vendors": "*",
+        "classification": "disk",
+        "refs": [
+            "https://www.kernel.org/doc/Documentation/iostats.txt",
+            "https://www.kernel.org/doc/Documentation/devices.txt"
+        ]
+    },
+    "disk.{disk_name}.timeReading": {
+        "display_name": "disk.{disk_name}.timeReading",
+        "units": "milliseconds",
+        "max": "MAX_UNSIGNED_LONG",
+        "min": 0,
+        "sig_figs": null,
+        "data_type": "time",
+        "type": "raw",
+        "formula" : null,
+        "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.timeReading$",
+        "description": "The number of milliseconds spent by all reads (as measured from __make_request() to end_that_request_last()). There is the possibility that this value will overflow and wrap on a 32-bit system that has been continuously running for a long time.",
+        "notes": {
+            "disk_type" : {
+                "dm-{disk_number}": "These are logical drives mapped by the linux kernel's logical volume manager (LVM).",
+                "loop{disk_number}": "These are loop devices used to mount filesystems not associated with block devices.",
+                "md{disk_number}": "These are Metadisk (RAID) devices. The metadisk driver is used to span a filesystem across multiple physical disks.",
+                "ram{disk_number}": "These are RAM disks",
+                "sd{disk_letter}": "These are SCSI disk devices. Disk letters range from a to p, allowing for a maximum of 16 devices.",
+                "sd{disk_letter}{partition_number}": "These are partitions on the SCSI device. The limit on partitions is 15."
+            }
+        },
+        "source": "/proc/diskstats",
+        "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.timeReading$",
+        "vendors": "*",
+        "classification": "disk",
+        "refs": [
+            "https://www.kernel.org/doc/Documentation/iostats.txt",
+            "https://www.kernel.org/doc/Documentation/devices.txt"
+        ]
+    },
+    "disk.{disk_name}.timeWriting": {
+        "display_name": "disk.{disk_name}.timeWriting",
+        "units": "milliseconds",
+        "max": "MAX_UNSIGNED_LONG",
+        "min": 0,
+        "sig_figs": null,
+        "data_type": "time",
+        "type": "raw",
+        "formula" : null,
+        "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.timeWriting$",
+        "description": "The number of milliseconds spent by all writes (as measured from __make_request() to end_that_request_last()). There is the possibility that this value will overflow and wrap on a 32-bit system that has been continuously running for a long time.",
+        "notes": {
+            "disk_type" : {
+                "dm-{disk_number}": "These are logical drives mapped by the linux kernel's logical volume manager (LVM).",
+                "loop{disk_number}": "These are loop devices used to mount filesystems not associated with block devices.",
+                "md{disk_number}": "These are Metadisk (RAID) devices. The metadisk driver is used to span a filesystem across multiple physical disks.",
+                "ram{disk_number}": "These are RAM disks",
+                "sd{disk_letter}": "These are SCSI disk devices. Disk letters range from a to p, allowing for a maximum of 16 devices.",
+                "sd{disk_letter}{partition_number}": "These are partitions on the SCSI device. The limit on partitions is 15."
+            }
+        },
+        "source": "/proc/diskstats",
+        "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.timeWriting$",
+        "vendors": "*",
+        "classification": "disk",
+        "refs": [
+            "https://www.kernel.org/doc/Documentation/iostats.txt",
+            "https://www.kernel.org/doc/Documentation/devices.txt"
+        ]
+    },
+    "disk.{disk_name}.writesComplted": {
+        "display_name": "disk.{disk_name}.writesComplted",
+        "units": "number of writes completed",
+        "max": "MAX_UNSIGNED_LONG",
+        "min": 0,
+        "sig_figs": null,
+        "data_type": "numeric",
+        "type": "raw",
+        "formula" : null,
+        "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.writesComplted$",
+        "description": "The number of writes completed successfully.",
+        "notes": {
+            "disk_type" : {
+                "dm-{disk_number}": "These are logical drives mapped by the linux kernel's logical volume manager (LVM).",
+                "loop{disk_number}": "These are loop devices used to mount filesystems not associated with block devices.",
+                "md{disk_number}": "These are Metadisk (RAID) devices. The metadisk driver is used to span a filesystem across multiple physical disks.",
+                "ram{disk_number}": "These are RAM disks",
+                "sd{disk_letter}": "These are SCSI disk devices. Disk letters range from a to p, allowing for a maximum of 16 devices.",
+                "sd{disk_letter}{partition_number}": "These are partitions on the SCSI device. The limit on partitions is 15."
+            }
+        },
+        "source": "/proc/diskstats",
+        "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.writesComplted$",
+        "vendors": "*",
+        "classification": "disk",
+        "refs": [
+            "https://www.kernel.org/doc/Documentation/iostats.txt",
+            "https://www.kernel.org/doc/Documentation/devices.txt"
+        ]
+    },
+    "disk.{disk_name}.writesMerge": {
+        "display_name": "disk.{disk_name}.writesMerge",
+        "units": "number of writes merged",
+        "max": "MAX_UNSIGNED_LONG",
+        "min": 0,
+        "sig_figs": null,
+        "data_type": "numeric",
+        "type": "raw",
+        "formula" : null,
+        "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.writesMerge$",
+        "description": "The number of adjacent writes merged for write efficiency. For example, two 4K writes may become one 8K write before it is ultimately handed to the disk, and so it will be queued (and counted) as only one I/O.",
+        "notes": {
+            "disk_type" : {
+                "dm-{disk_number}": "These are logical drives mapped by the linux kernel's logical volume manager (LVM).",
+                "loop{disk_number}": "These are loop devices used to mount filesystems not associated with block devices.",
+                "md{disk_number}": "These are Metadisk (RAID) devices. The metadisk driver is used to span a filesystem across multiple physical disks.",
+                "ram{disk_number}": "These are RAM disks",
+                "sd{disk_letter}": "These are SCSI disk devices. Disk letters range from a to p, allowing for a maximum of 16 devices.",
+                "sd{disk_letter}{partition_number}": "These are partitions on the SCSI device. The limit on partitions is 15."
+            }
+        },
+        "source": "/proc/diskstats",
+        "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.writesMerge$",
+        "vendors": "*",
+        "classification": "disk",
+        "refs": [
+            "https://www.kernel.org/doc/Documentation/iostats.txt",
+            "https://www.kernel.org/doc/Documentation/devices.txt"
+        ]
+    },
+    "disk.{disk_name}.weightedTimeDoingIO": {
+        "display_name": "disk.{disk_name}.weightedTimeDoingIO",
+        "units": "milliseconds",
+        "max": "MAX_UNSIGNED_LONG",
+        "min": 0,
+        "sig_figs": null,
+        "data_type": "time",
+        "type": "raw",
+        "formula" : null,
+        "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.weightedTimeDoingIO$",
+        "description": "The weighted amount of time processing I/Os that is incremented every time the number of I/Os in progress is updated. The stepwise increment is equal to the number of I/Os in progress multiplied by the number of milliseconds spent doing I/Os since the last time number of I/Os in progress was updated. This can provide an easy measure of both I/O completion time and the backlog that may be accumulating.",
+        "notes": {
+            "disk_type" : {
+                "dm-{disk_number}": "These are logical drives mapped by the linux kernel's logical volume manager (LVM).",
+                "loop{disk_number}": "These are loop devices used to mount filesystems not associated with block devices.",
+                "md{disk_number}": "These are Metadisk (RAID) devices. The metadisk driver is used to span a filesystem across multiple physical disks.",
+                "ram{disk_number}": "These are RAM disks",
+                "sd{disk_letter}": "These are SCSI disk devices. Disk letters range from a to p, allowing for a maximum of 16 devices.",
+                "sd{disk_letter}{partition_number}": "These are partitions on the SCSI device. The limit on partitions is 15."
+            }
+        },
+        "source": "/proc/diskstats",
+        "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.weightedTimeDoingIO$",
+        "vendors": "*",
+        "classification": "disk",
+        "refs": [
+            "https://www.kernel.org/doc/Documentation/iostats.txt",
+            "https://www.kernel.org/doc/Documentation/devices.txt"
+        ]
+    },
+    "disk.{disk_name}.size": {
+        "display_name": "disk.{disk_name}.size",
+        "units": "gigabytes",
+        "max": "total size of the file system",
+        "min": "total size of the file system",
+        "sig_figs": null,
+        "data_type": "numeric",
+        "type": "raw",
+        "formula" : null,
+        "variants": "^disk\\.(sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.size$",
+        "description": "The total size of the file system.",
+        "notes": "This metric is only collected for disk drive names starting with 'sd' in the NMA code.",
+        "source": "df /dev/{disk_name}",
+        "device": "^disk\\.(sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.size$",
+        "vendors": "*",
+        "classification": "disk",
+        "refs": [
+            "http://linux.die.net/man/1/df",
+            "http://en.wikipedia.org/wiki/Df_(Unix)",
+            "https://www.kernel.org/doc/Documentation/devices.txt"
+        ]
+    },
+    "disk.{disk_name}.used": {
+        "display_name": "disk.{disk_name}.used",
+        "units": "gigabytes",
+        "max": "total size of the file system",
+        "min": 0,
+        "sig_figs": null,
+        "data_type": "numeric",
+        "type": "raw",
+        "formula" : null,
+        "variants": "^disk\\.(sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.used$",
+        "description": "The amount of space allocated to existing files in the file system.",
+        "notes": "This metric is only collected for disk drive names starting with 'sd' in the NMA code.",
+        "source": "df /dev/{disk_name}",
+        "device": "^disk\\.(sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.used$",
+        "vendors": "*",
+        "classification": "disk",
+        "refs": [
+            "http://linux.die.net/man/1/df",
+            "http://en.wikipedia.org/wiki/Df_(Unix)",
+            "https://www.kernel.org/doc/Documentation/devices.txt"
+        ]
+    },
+    "disk.{disk_name}.available": {
+        "display_name": "disk.{disk_name}.available",
+        "units": "gigabytes",
+        "max": "total size of the file system",
+        "min": "less than 0 is possible",
+        "sig_figs": null,
+        "data_type": "numeric",
+        "type": "raw",
+        "formula" : null,
+        "variants": "^disk\\.(sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.available$",
+        "description": "The amount of space available within the file system for the creation of new files by unprivileged users. When this value is less than or equal to zero, it will not be possible to create any new files on the file system without first deleting others, unless the process has appropriate privileges.",
+        "notes": "This metric is only collected for disk drive names starting with 'sd' in the NMA code.",
+        "source": "df /dev/{disk_name}",
+        "device": "^disk\\.(sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.available$",
+        "vendors": "*",
+        "classification": "disk",
+        "refs": [
+            "http://linux.die.net/man/1/df",
+            "http://en.wikipedia.org/wiki/Df_(Unix)",
+            "https://www.kernel.org/doc/Documentation/devices.txt"
+        ]
+    },
+    "disk.{disk_name}.utilization": {
+        "display_name": "disk.{disk_name}.utilization",
+        "units": "percentage",
+        "max": "infinity",
+        "min": 0,
+        "sig_figs": null,
+        "data_type": "percentage",
+        "type": "derived",
+        "formula" : "\\frac{disk_{used}}{disk_{available}}",
+        "variants": "^disk\\.(sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.utilization$",
+        "description": "The disk utilization (used storage divided by available storage) for this disk.",
+        "notes": "This metric is only calculated for disk drive names starting with 'sd' in the NMA code.",
+        "source": null,
+        "device": "^disk\\.(sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.available$",
+        "vendors": "*",
+        "classification": "disk",
+        "refs": [
+            "http://linux.die.net/man/1/df",
+            "https://www.kernel.org/doc/Documentation/devices.txt"
+        ]
+    },
+    "disk.utilization": {
+        "display_name": "disk.utilization",
+        "units": "percentage",
+        "max": "infinity",
+        "min": 0,
+        "sig_figs": null,
+        "data_type": "percentage",
+        "type": "derived",
+        "formula" : "\\frac{\\sum_{disks}\\frac{disk_{used}}{disk_{available}}}{n_{disks}}",
+        "variants": null,
+        "description": "The average disk utilization (used storage divided by available storage) across all disks.",
+        "notes": "This metric is only calculated for disk drive names starting with 'sd' in the NMA code.",
+        "source": null,
+        "device": null,
+        "vendors": "*",
+        "classification": "disk",
+        "refs": [
+            "http://linux.die.net/man/1/df",
+            "https://www.kernel.org/doc/Documentation/devices.txt"
+        ]
+    }
+}
