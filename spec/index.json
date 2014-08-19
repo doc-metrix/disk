@@ -10,16 +10,7 @@
         "formula" : null,
         "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.ioInProgres$",
         "description": "The number of inputs and outputs currently in progress. Incremented as requests are submitted and decremented as they finish. This does not include requests that are in queue waiting to be submitted.",
-        "notes": {
-            "disk_type" : {
-                "dm-{disk_number}": "These are logical drives mapped by the linux kernel's logical volume manager (LVM).",
-                "loop{disk_number}": "These are loop devices used to mount filesystems not associated with block devices.",
-                "md{disk_number}": "These are Metadisk (RAID) devices. The metadisk driver is used to span a filesystem across multiple physical disks.",
-                "ram{disk_number}": "These are RAM disks",
-                "sd{disk_letter}": "These are SCSI disk devices. Disk letters range from a to p, allowing for a maximum of 16 devices.",
-                "sd{disk_letter}{partition_number}": "These are partitions on the SCSI device. The limit on partitions is 15."
-            }
-        },
+        "notes": "",
         "source": "/proc/diskstats",
         "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.ioInProgres$",
         "vendors": "*",
@@ -41,16 +32,7 @@
         "formula" : null,
         "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.readsIssued$",
         "description": "The number of reads completed successfully.",
-        "notes": {
-            "disk_type" : {
-                "dm-{disk_number}": "These are logical drives mapped by the linux kernel's logical volume manager (LVM).",
-                "loop{disk_number}": "These are loop devices used to mount filesystems not associated with block devices.",
-                "md{disk_number}": "These are Metadisk (RAID) devices. The metadisk driver is used to span a filesystem across multiple physical disks.",
-                "ram{disk_number}": "These are RAM disks",
-                "sd{disk_letter}": "These are SCSI disk devices. Disk letters range from a to p, allowing for a maximum of 16 devices.",
-                "sd{disk_letter}{partition_number}": "These are partitions on the SCSI device. The limit on partitions is 15."
-            }
-        },
+        "notes": "",
         "source": "/proc/diskstats",
         "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.readsIssued$",
         "vendors": "*",
@@ -71,16 +53,7 @@
         "formula" : null,
         "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.readsMerged$",
         "description": "The number of adjacent reads merged for read efficiency. For example, two 4K reads may become one 8K read before it is ultimately handed to the disk, and so it will be queued (and counted) as only one I/O.",
-        "notes": {
-            "disk_type" : {
-                "dm-{disk_number}": "These are logical drives mapped by the linux kernel's logical volume manager (LVM).",
-                "loop{disk_number}": "These are loop devices used to mount filesystems not associated with block devices.",
-                "md{disk_number}": "These are Metadisk (RAID) devices. The metadisk driver is used to span a filesystem across multiple physical disks.",
-                "ram{disk_number}": "These are RAM disks",
-                "sd{disk_letter}": "These are SCSI disk devices. Disk letters range from a to p, allowing for a maximum of 16 devices.",
-                "sd{disk_letter}{partition_number}": "These are partitions on the SCSI device. The limit on partitions is 15."
-            }
-        },
+        "notes": "",
         "source": "/proc/diskstats",
         "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.readsMerged$",
         "vendors": "*",
@@ -101,16 +74,7 @@
         "formula" : null,
         "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.sectorsRead$",
         "description": "The number of sectors read successfully.",
-        "notes": {
-            "disk_type" : {
-                "dm-{disk_number}": "These are logical drives mapped by the linux kernel's logical volume manager (LVM).",
-                "loop{disk_number}": "These are loop devices used to mount filesystems not associated with block devices.",
-                "md{disk_number}": "These are Metadisk (RAID) devices. The metadisk driver is used to span a filesystem across multiple physical disks.",
-                "ram{disk_number}": "These are RAM disks",
-                "sd{disk_letter}": "These are SCSI disk devices. Disk letters range from a to p, allowing for a maximum of 16 devices.",
-                "sd{disk_letter}{partition_number}": "These are partitions on the SCSI device. The limit on partitions is 15."
-            }
-        },
+        "notes": "",
         "source": "/proc/diskstats",
         "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.sectorsRead$",
         "vendors": "*",
@@ -131,16 +95,7 @@
         "formula" : null,
         "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.sectorsWriten$",
         "description": "The number of sectors written successfully.",
-        "notes": {
-            "disk_type" : {
-                "dm-{disk_number}": "These are logical drives mapped by the linux kernel's logical volume manager (LVM).",
-                "loop{disk_number}": "These are loop devices used to mount filesystems not associated with block devices.",
-                "md{disk_number}": "These are Metadisk (RAID) devices. The metadisk driver is used to span a filesystem across multiple physical disks.",
-                "ram{disk_number}": "These are RAM disks",
-                "sd{disk_letter}": "These are SCSI disk devices. Disk letters range from a to p, allowing for a maximum of 16 devices.",
-                "sd{disk_letter}{partition_number}": "These are partitions on the SCSI device. The limit on partitions is 15."
-            }
-        },
+        "notes": "",
         "source": "/proc/diskstats",
         "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.sectorsWriten$",
         "vendors": "*",
@@ -161,16 +116,7 @@
         "formula" : null,
         "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.timeDoingIO$",
         "description": "The number of milliseconds spent processing IO requests, which increases when number of I/Os in progress is nonzero.",
-        "notes": {
-            "disk_type" : {
-                "dm-{disk_number}": "These are logical drives mapped by the linux kernel's logical volume manager (LVM).",
-                "loop{disk_number}": "These are loop devices used to mount filesystems not associated with block devices.",
-                "md{disk_number}": "These are Metadisk (RAID) devices. The metadisk driver is used to span a filesystem across multiple physical disks.",
-                "ram{disk_number}": "These are RAM disks",
-                "sd{disk_letter}": "These are SCSI disk devices. Disk letters range from a to p, allowing for a maximum of 16 devices.",
-                "sd{disk_letter}{partition_number}": "These are partitions on the SCSI device. The limit on partitions is 15."
-            }
-        },
+        "notes": "",
         "source": "/proc/diskstats",
         "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.timeDoingIO$",
         "vendors": "*",
@@ -191,16 +137,7 @@
         "formula" : null,
         "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.timeReading$",
         "description": "The number of milliseconds spent by all reads (as measured from __make_request() to end_that_request_last()). There is the possibility that this value will overflow and wrap on a 32-bit system that has been continuously running for a long time.",
-        "notes": {
-            "disk_type" : {
-                "dm-{disk_number}": "These are logical drives mapped by the linux kernel's logical volume manager (LVM).",
-                "loop{disk_number}": "These are loop devices used to mount filesystems not associated with block devices.",
-                "md{disk_number}": "These are Metadisk (RAID) devices. The metadisk driver is used to span a filesystem across multiple physical disks.",
-                "ram{disk_number}": "These are RAM disks",
-                "sd{disk_letter}": "These are SCSI disk devices. Disk letters range from a to p, allowing for a maximum of 16 devices.",
-                "sd{disk_letter}{partition_number}": "These are partitions on the SCSI device. The limit on partitions is 15."
-            }
-        },
+        "notes": "",
         "source": "/proc/diskstats",
         "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.timeReading$",
         "vendors": "*",
@@ -221,16 +158,7 @@
         "formula" : null,
         "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.timeWriting$",
         "description": "The number of milliseconds spent by all writes (as measured from __make_request() to end_that_request_last()). There is the possibility that this value will overflow and wrap on a 32-bit system that has been continuously running for a long time.",
-        "notes": {
-            "disk_type" : {
-                "dm-{disk_number}": "These are logical drives mapped by the linux kernel's logical volume manager (LVM).",
-                "loop{disk_number}": "These are loop devices used to mount filesystems not associated with block devices.",
-                "md{disk_number}": "These are Metadisk (RAID) devices. The metadisk driver is used to span a filesystem across multiple physical disks.",
-                "ram{disk_number}": "These are RAM disks",
-                "sd{disk_letter}": "These are SCSI disk devices. Disk letters range from a to p, allowing for a maximum of 16 devices.",
-                "sd{disk_letter}{partition_number}": "These are partitions on the SCSI device. The limit on partitions is 15."
-            }
-        },
+        "notes": "",
         "source": "/proc/diskstats",
         "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.timeWriting$",
         "vendors": "*",
@@ -251,16 +179,7 @@
         "formula" : null,
         "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.writesComplted$",
         "description": "The number of writes completed successfully.",
-        "notes": {
-            "disk_type" : {
-                "dm-{disk_number}": "These are logical drives mapped by the linux kernel's logical volume manager (LVM).",
-                "loop{disk_number}": "These are loop devices used to mount filesystems not associated with block devices.",
-                "md{disk_number}": "These are Metadisk (RAID) devices. The metadisk driver is used to span a filesystem across multiple physical disks.",
-                "ram{disk_number}": "These are RAM disks",
-                "sd{disk_letter}": "These are SCSI disk devices. Disk letters range from a to p, allowing for a maximum of 16 devices.",
-                "sd{disk_letter}{partition_number}": "These are partitions on the SCSI device. The limit on partitions is 15."
-            }
-        },
+        "notes": "",
         "source": "/proc/diskstats",
         "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.writesComplted$",
         "vendors": "*",
@@ -281,16 +200,7 @@
         "formula" : null,
         "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.writesMerge$",
         "description": "The number of adjacent writes merged for write efficiency. For example, two 4K writes may become one 8K write before it is ultimately handed to the disk, and so it will be queued (and counted) as only one I/O.",
-        "notes": {
-            "disk_type" : {
-                "dm-{disk_number}": "These are logical drives mapped by the linux kernel's logical volume manager (LVM).",
-                "loop{disk_number}": "These are loop devices used to mount filesystems not associated with block devices.",
-                "md{disk_number}": "These are Metadisk (RAID) devices. The metadisk driver is used to span a filesystem across multiple physical disks.",
-                "ram{disk_number}": "These are RAM disks",
-                "sd{disk_letter}": "These are SCSI disk devices. Disk letters range from a to p, allowing for a maximum of 16 devices.",
-                "sd{disk_letter}{partition_number}": "These are partitions on the SCSI device. The limit on partitions is 15."
-            }
-        },
+        "notes": "",
         "source": "/proc/diskstats",
         "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.writesMerge$",
         "vendors": "*",
@@ -311,16 +221,7 @@
         "formula" : null,
         "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.weightedTimeDoingIO$",
         "description": "The weighted amount of time processing I/Os that is incremented every time the number of I/Os in progress is updated. The stepwise increment is equal to the number of I/Os in progress multiplied by the number of milliseconds spent doing I/Os since the last time number of I/Os in progress was updated. This can provide an easy measure of both I/O completion time and the backlog that may be accumulating.",
-        "notes": {
-            "disk_type" : {
-                "dm-{disk_number}": "These are logical drives mapped by the linux kernel's logical volume manager (LVM).",
-                "loop{disk_number}": "These are loop devices used to mount filesystems not associated with block devices.",
-                "md{disk_number}": "These are Metadisk (RAID) devices. The metadisk driver is used to span a filesystem across multiple physical disks.",
-                "ram{disk_number}": "These are RAM disks",
-                "sd{disk_letter}": "These are SCSI disk devices. Disk letters range from a to p, allowing for a maximum of 16 devices.",
-                "sd{disk_letter}{partition_number}": "These are partitions on the SCSI device. The limit on partitions is 15."
-            }
-        },
+        "notes": "",
         "source": "/proc/diskstats",
         "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.weightedTimeDoingIO$",
         "vendors": "*",
