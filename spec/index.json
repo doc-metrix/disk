@@ -1,6 +1,6 @@
 {
     "disk.{disk_name}.ioInProgres": {
-        "display_name": "disk.{disk_name}.ioInProgres",
+        "display_name": "IOs in Progress",
         "units": "number of I/Os in progress",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
@@ -24,7 +24,7 @@
         ]
     },
     "disk.{disk_name}.readsIssued": {
-        "display_name": "disk.{disk_name}.readsIssued",
+        "display_name": "Reads Issued",
         "units": "number of reads completed",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
@@ -47,7 +47,7 @@
         ]
     },
     "disk.{disk_name}.readsMerged": {
-        "display_name": "disk.{disk_name}.readsMerged",
+        "display_name": "Reads Merged",
         "units": "number of reads merged",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
@@ -70,7 +70,7 @@
         ]
     },
     "disk.{disk_name}.sectorsRead": {
-        "display_name": "disk.{disk_name}.sectorsRead",
+        "display_name": "Sectors Read",
         "units": "number of sectors read",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
@@ -93,7 +93,7 @@
         ]
     },
     "disk.{disk_name}.sectorsWriten": {
-        "display_name": "disk.{disk_name}.sectorsWriten",
+        "display_name": "Sectors Written",
         "units": "number of sectors written",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
@@ -116,7 +116,7 @@
         ]
     },
     "disk.{disk_name}.timeDoingIO": {
-        "display_name": "disk.{disk_name}.timeDoingIO",
+        "display_name": "Time Spent Doing IO",
         "units": "milliseconds",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
@@ -139,7 +139,7 @@
         ]
     },
     "disk.{disk_name}.timeReading": {
-        "display_name": "disk.{disk_name}.timeReading",
+        "display_name": "Time Spent Reading",
         "units": "milliseconds",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
@@ -162,7 +162,7 @@
         ]
     },
     "disk.{disk_name}.timeWriting": {
-        "display_name": "disk.{disk_name}.timeWriting",
+        "display_name": "Time Spent Writing",
         "units": "milliseconds",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
@@ -185,7 +185,7 @@
         ]
     },
     "disk.{disk_name}.writesComplted": {
-        "display_name": "disk.{disk_name}.writesComplted",
+        "display_name": "Writes Completed",
         "units": "number of writes completed",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
@@ -208,7 +208,7 @@
         ]
     },
     "disk.{disk_name}.writesMerge": {
-        "display_name": "disk.{disk_name}.writesMerge",
+        "display_name": "Writes Merged",
         "units": "number of writes merged",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
@@ -231,7 +231,7 @@
         ]
     },
     "disk.{disk_name}.weightedTimeDoingIO": {
-        "display_name": "disk.{disk_name}.weightedTimeDoingIO",
+        "display_name": "Weighted Time Spent Doing IO",
         "units": "milliseconds",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
@@ -254,7 +254,7 @@
         ]
     },
     "disk.{disk_name}.size": {
-        "display_name": "disk.{disk_name}.size",
+        "display_name": "File System Size",
         "units": "GB",
         "max": null,
         "min": null,
@@ -278,7 +278,7 @@
         ]
     },
     "disk.{disk_name}.used": {
-        "display_name": "disk.{disk_name}.used",
+        "display_name": "File System Used",
         "units": "GB",
         "max": null,
         "min": 0,
@@ -302,7 +302,7 @@
         ]
     },
     "disk.{disk_name}.available": {
-        "display_name": "disk.{disk_name}.available",
+        "display_name": "File System Available",
         "units": "GB",
         "max": null,
         "min": null,
@@ -326,7 +326,7 @@
         ]
     },
     "disk.{disk_name}.utilization": {
-        "display_name": "disk.{disk_name}.utilization",
+        "display_name": "Disk or Partition Utilization",
         "units": "utilization",
         "max": 1,
         "min": 0,
@@ -347,7 +347,7 @@
         ]
     },
     "disk.utilization": {
-        "display_name": "disk.utilization",
+        "display_name": "Average Disk Utilization",
         "units": "utilization",
         "max": 1,
         "min": 0,
