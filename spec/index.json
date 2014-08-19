@@ -11,7 +11,9 @@
         "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.ioInProgres$",
         "description": "The number of inputs and outputs currently in progress. Incremented as requests are submitted and decremented as they finish. This does not include requests that are in queue waiting to be submitted.",
         "notes": "",
-        "source": "/proc/diskstats",
+        "source": {
+            "^linux\\skernel$": ["/proc/diskstats"]
+        },
         "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.ioInProgres$",
         "vendors": "*",
         "classification": "disk",
@@ -33,7 +35,9 @@
         "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.readsIssued$",
         "description": "The number of reads completed successfully.",
         "notes": "",
-        "source": "/proc/diskstats",
+        "source": {
+            "^linux\\skernel$": ["/proc/diskstats"]
+        },
         "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.readsIssued$",
         "vendors": "*",
         "classification": "disk",
@@ -54,7 +58,9 @@
         "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.readsMerged$",
         "description": "The number of adjacent reads merged for read efficiency. For example, two 4K reads may become one 8K read before it is ultimately handed to the disk, and so it will be queued (and counted) as only one I/O.",
         "notes": "",
-        "source": "/proc/diskstats",
+        "source": {
+            "^linux\\skernel$": ["/proc/diskstats"]
+        },
         "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.readsMerged$",
         "vendors": "*",
         "classification": "disk",
@@ -75,7 +81,9 @@
         "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.sectorsRead$",
         "description": "The number of sectors read successfully.",
         "notes": "",
-        "source": "/proc/diskstats",
+        "source": {
+            "^linux\\skernel$": ["/proc/diskstats"]
+        },
         "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.sectorsRead$",
         "vendors": "*",
         "classification": "disk",
@@ -96,7 +104,9 @@
         "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.sectorsWriten$",
         "description": "The number of sectors written successfully.",
         "notes": "",
-        "source": "/proc/diskstats",
+        "source": {
+            "^linux\\skernel$": ["/proc/diskstats"]
+        },
         "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.sectorsWriten$",
         "vendors": "*",
         "classification": "disk",
@@ -117,7 +127,9 @@
         "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.timeDoingIO$",
         "description": "The number of milliseconds spent processing IO requests, which increases when number of I/Os in progress is nonzero.",
         "notes": "",
-        "source": "/proc/diskstats",
+        "source": {
+            "^linux\\skernel$": ["/proc/diskstats"]
+        },
         "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.timeDoingIO$",
         "vendors": "*",
         "classification": "disk",
@@ -138,7 +150,9 @@
         "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.timeReading$",
         "description": "The number of milliseconds spent by all reads (as measured from __make_request() to end_that_request_last()). There is the possibility that this value will overflow and wrap on a 32-bit system that has been continuously running for a long time.",
         "notes": "",
-        "source": "/proc/diskstats",
+        "source": {
+            "^linux\\skernel$": ["/proc/diskstats"]
+        },
         "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.timeReading$",
         "vendors": "*",
         "classification": "disk",
@@ -159,7 +173,9 @@
         "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.timeWriting$",
         "description": "The number of milliseconds spent by all writes (as measured from __make_request() to end_that_request_last()). There is the possibility that this value will overflow and wrap on a 32-bit system that has been continuously running for a long time.",
         "notes": "",
-        "source": "/proc/diskstats",
+        "source": {
+            "^linux\\skernel$": ["/proc/diskstats"]
+        },
         "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.timeWriting$",
         "vendors": "*",
         "classification": "disk",
@@ -180,7 +196,9 @@
         "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.writesComplted$",
         "description": "The number of writes completed successfully.",
         "notes": "",
-        "source": "/proc/diskstats",
+        "source": {
+            "^linux\\skernel$": ["/proc/diskstats"]
+        },
         "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.writesComplted$",
         "vendors": "*",
         "classification": "disk",
@@ -201,7 +219,9 @@
         "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.writesMerge$",
         "description": "The number of adjacent writes merged for write efficiency. For example, two 4K writes may become one 8K write before it is ultimately handed to the disk, and so it will be queued (and counted) as only one I/O.",
         "notes": "",
-        "source": "/proc/diskstats",
+        "source": {
+            "^linux\\skernel$": ["/proc/diskstats"]
+        },
         "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.writesMerge$",
         "vendors": "*",
         "classification": "disk",
@@ -222,7 +242,9 @@
         "variants": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.weightedTimeDoingIO$",
         "description": "The weighted amount of time processing I/Os that is incremented every time the number of I/Os in progress is updated. The stepwise increment is equal to the number of I/Os in progress multiplied by the number of milliseconds spent doing I/Os since the last time number of I/Os in progress was updated. This can provide an easy measure of both I/O completion time and the backlog that may be accumulating.",
         "notes": "",
-        "source": "/proc/diskstats",
+        "source": {
+            "^linux\\skernel$": ["/proc/diskstats"]
+        },
         "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.weightedTimeDoingIO$",
         "vendors": "*",
         "classification": "disk",
@@ -243,7 +265,9 @@
         "variants": "^disk\\.(sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.size$",
         "description": "The total size of the file system.",
         "notes": "This metric is only collected for disk drive names starting with 'sd' in the NMA code.",
-        "source": "df /dev/{disk_name}",
+        "source": {
+            "^linux\\skernel$": ["df /dev/{disk_name}"]
+        },
         "device": "^disk\\.(sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.size$",
         "vendors": "*",
         "classification": "disk",
@@ -265,7 +289,9 @@
         "variants": "^disk\\.(sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.used$",
         "description": "The amount of space allocated to existing files in the file system.",
         "notes": "This metric is only collected for disk drive names starting with 'sd' in the NMA code. The maximum value is the total size of the file system.",
-        "source": "df /dev/{disk_name}",
+        "source": {
+            "^linux\\skernel$": ["df /dev/{disk_name}"]
+        },
         "device": "^disk\\.(sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.used$",
         "vendors": "*",
         "classification": "disk",
@@ -287,7 +313,9 @@
         "variants": "^disk\\.(sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.available$",
         "description": "The amount of space available within the file system for the creation of new files by unprivileged users. When this value is less than or equal to zero, it will not be possible to create any new files on the file system without first deleting others, unless the process has appropriate privileges.",
         "notes": "This metric is only collected for disk drive names starting with 'sd' in the NMA code. The maximum value is the total size of the file system. The minimum value can be less than 0.",
-        "source": "df /dev/{disk_name}",
+        "source": {
+            "^linux\\skernel$": ["df /dev/{disk_name}"]
+        },
         "device": "^disk\\.(sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.available$",
         "vendors": "*",
         "classification": "disk",
