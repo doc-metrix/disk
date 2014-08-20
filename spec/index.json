@@ -24,7 +24,7 @@
         ]
     },
     "disk.{disk_name}.readsIssued": {
-        "display_name": "Reads Issued",
+        "display_name": "Reads Completed",
         "units": "number of reads completed",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
@@ -335,7 +335,7 @@
         "type": "derived",
         "formula" : "\\frac{disk_{used}}{disk_{size}}",
         "variants": "^disk\\.(sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.utilization$",
-        "description": "The disk utilization (used storage divided by total size) for this disk.",
+        "description": "The disk space utilization (used storage divided by total size) for this disk.",
         "notes": "This metric is only calculated for disk drive names starting with 'sd' in the NMA code. The NMA code is dividing by available storage.",
         "source": null,
         "device": "^disk\\.(sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.utilization$",
@@ -356,7 +356,7 @@
         "type": "derived",
         "formula" : "\\frac{\\sum_{disks}\\frac{disk_{used}}{disk_{size}}}{n_{disks}}",
         "variants": null,
-        "description": "The average disk utilization (used storage divided by total size) across all disks.",
+        "description": "The average disk space utilization (used storage divided by total size) across all disks.",
         "notes": "This metric is only calculated for disk drive names starting with 'sd' in the NMA code. The NMA code is dividing by available storage.",
         "source": null,
         "device": null,
