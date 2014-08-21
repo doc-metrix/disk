@@ -1,5 +1,5 @@
 {
-    "disk.{disk_name}.ioInProgres": {
+    "disk.ioInProgres": {
         "display_name": "IOs in Progress",
         "units": "count",
         "max": "MAX_UNSIGNED_LONG",
@@ -10,8 +10,12 @@
         "formula": null,
         "description": "The number of inputs and outputs currently in progress. Incremented as requests are submitted and decremented as they finish. This does not include requests that are in queue waiting to be submitted.",
         "notes": "",
-        "source": {
-            "^linux\\skernel$": ["/proc/diskstats"]
+        "platforms": {
+            "linux": {
+                "ubuntu": {
+                    "*": ["/proc/diskstats"]
+                }
+            }
         },
         "device": "dm-|loop|md|ram|sd",
         "vendors": "*",
@@ -22,7 +26,7 @@
             "http://linuxcommand.org/man_pages/iostat1.html"
         ]
     },
-    "disk.{disk_name}.readsIssued": {
+    "disk.readsIssued": {
         "display_name": "Reads Completed",
         "units": "count",
         "max": "MAX_UNSIGNED_LONG",
@@ -33,8 +37,12 @@
         "formula": null,
         "description": "The number of reads completed successfully.",
         "notes": "",
-        "source": {
-            "^linux\\skernel$": ["/proc/diskstats"]
+        "platforms": {
+            "linux": {
+                "ubuntu": {
+                    "*": ["/proc/diskstats"]
+                }
+            }
         },
         "device": "dm-|loop|md|ram|sd",
         "vendors": "*",
@@ -44,7 +52,7 @@
             "https://www.kernel.org/doc/Documentation/devices.txt"
         ]
     },
-    "disk.{disk_name}.readsMerged": {
+    "disk.readsMerged": {
         "display_name": "Reads Merged",
         "units": "count",
         "max": "MAX_UNSIGNED_LONG",
@@ -55,8 +63,12 @@
         "formula": null,
         "description": "The number of adjacent reads merged for read efficiency. For example, two 4K reads may become one 8K read before it is ultimately handed to the disk, and so it will be queued (and counted) as only one I/O.",
         "notes": "",
-        "source": {
-            "^linux\\skernel$": ["/proc/diskstats"]
+        "platforms": {
+            "linux": {
+                "ubuntu": {
+                    "*": ["/proc/diskstats"]
+                }
+            }
         },
         "device": "dm-|loop|md|ram|sd",
         "vendors": "*",
@@ -66,7 +78,7 @@
             "https://www.kernel.org/doc/Documentation/devices.txt"
         ]
     },
-    "disk.{disk_name}.sectorsRead": {
+    "disk.sectorsRead": {
         "display_name": "Sectors Read",
         "units": "count",
         "max": "MAX_UNSIGNED_LONG",
@@ -77,8 +89,12 @@
         "formula": null,
         "description": "The number of sectors read successfully.",
         "notes": "",
-        "source": {
-            "^linux\\skernel$": ["/proc/diskstats"]
+        "platforms": {
+            "linux": {
+                "ubuntu": {
+                    "*": ["/proc/diskstats"]
+                }
+            }
         },
         "device": "dm-|loop|md|ram|sd",
         "vendors": "*",
@@ -88,7 +104,7 @@
             "https://www.kernel.org/doc/Documentation/devices.txt"
         ]
     },
-    "disk.{disk_name}.sectorsWriten": {
+    "disk.sectorsWriten": {
         "display_name": "Sectors Written",
         "units": "count",
         "max": "MAX_UNSIGNED_LONG",
@@ -99,8 +115,12 @@
         "formula": null,
         "description": "The number of sectors written successfully.",
         "notes": "",
-        "source": {
-            "^linux\\skernel$": ["/proc/diskstats"]
+        "platforms": {
+            "linux": {
+                "ubuntu": {
+                    "*": ["/proc/diskstats"]
+                }
+            }
         },
         "device": "dm-|loop|md|ram|sd",
         "vendors": "*",
@@ -110,7 +130,7 @@
             "https://www.kernel.org/doc/Documentation/devices.txt"
         ]
     },
-    "disk.{disk_name}.timeDoingIO": {
+    "disk.timeDoingIO": {
         "display_name": "Time Spent Doing IO",
         "units": "ms",
         "max": "MAX_UNSIGNED_LONG",
@@ -121,8 +141,12 @@
         "formula": null,
         "description": "The number of milliseconds spent processing IO requests, which increases when number of I/Os in progress is nonzero.",
         "notes": "",
-        "source": {
-            "^linux\\skernel$": ["/proc/diskstats"]
+        "platforms": {
+            "linux": {
+                "ubuntu": {
+                    "*": ["/proc/diskstats"]
+                }
+            }
         },
         "device": "dm-|loop|md|ram|sd",
         "vendors": "*",
@@ -132,7 +156,7 @@
             "https://www.kernel.org/doc/Documentation/devices.txt"
         ]
     },
-    "disk.{disk_name}.timeReading": {
+    "disk.timeReading": {
         "display_name": "Time Spent Reading",
         "units": "ms",
         "max": "MAX_UNSIGNED_LONG",
@@ -143,8 +167,12 @@
         "formula": null,
         "description": "The number of milliseconds spent by all reads (as measured from __make_request() to end_that_request_last()). There is the possibility that this value will overflow and wrap on a 32-bit system that has been continuously running for a long time.",
         "notes": "",
-        "source": {
-            "^linux\\skernel$": ["/proc/diskstats"]
+        "platforms": {
+            "linux": {
+                "ubuntu": {
+                    "*": ["/proc/diskstats"]
+                }
+            }
         },
         "device": "dm-|loop|md|ram|sd",
         "vendors": "*",
@@ -154,7 +182,7 @@
             "https://www.kernel.org/doc/Documentation/devices.txt"
         ]
     },
-    "disk.{disk_name}.timeWriting": {
+    "disk.timeWriting": {
         "display_name": "Time Spent Writing",
         "units": "ms",
         "max": "MAX_UNSIGNED_LONG",
@@ -165,8 +193,12 @@
         "formula": null,
         "description": "The number of milliseconds spent by all writes (as measured from __make_request() to end_that_request_last()). There is the possibility that this value will overflow and wrap on a 32-bit system that has been continuously running for a long time.",
         "notes": "",
-        "source": {
-            "^linux\\skernel$": ["/proc/diskstats"]
+        "platforms": {
+            "linux": {
+                "ubuntu": {
+                    "*": ["/proc/diskstats"]
+                }
+            }
         },
         "device": "dm-|loop|md|ram|sd",
         "vendors": "*",
@@ -176,7 +208,7 @@
             "https://www.kernel.org/doc/Documentation/devices.txt"
         ]
     },
-    "disk.{disk_name}.writesComplted": {
+    "disk.writesComplted": {
         "display_name": "Writes Completed",
         "units": "count",
         "max": "MAX_UNSIGNED_LONG",
@@ -187,8 +219,12 @@
         "formula": null,
         "description": "The number of writes completed successfully.",
         "notes": "",
-        "source": {
-            "^linux\\skernel$": ["/proc/diskstats"]
+        "platforms": {
+            "linux": {
+                "ubuntu": {
+                    "*": ["/proc/diskstats"]
+                }
+            }
         },
         "device": "dm-|loop|md|ram|sd",
         "vendors": "*",
@@ -198,7 +234,7 @@
             "https://www.kernel.org/doc/Documentation/devices.txt"
         ]
     },
-    "disk.{disk_name}.writesMerge": {
+    "disk.writesMerge": {
         "display_name": "Writes Merged",
         "units": "count",
         "max": "MAX_UNSIGNED_LONG",
@@ -209,8 +245,12 @@
         "formula": null,
         "description": "The number of adjacent writes merged for write efficiency. For example, two 4K writes may become one 8K write before it is ultimately handed to the disk, and so it will be queued (and counted) as only one I/O.",
         "notes": "",
-        "source": {
-            "^linux\\skernel$": ["/proc/diskstats"]
+        "platforms": {
+            "linux": {
+                "ubuntu": {
+                    "*": ["/proc/diskstats"]
+                }
+            }
         },
         "device": "dm-|loop|md|ram|sd",
         "vendors": "*",
@@ -220,7 +260,7 @@
             "https://www.kernel.org/doc/Documentation/devices.txt"
         ]
     },
-    "disk.{disk_name}.weightedTimeDoingIO": {
+    "disk.weightedTimeDoingIO": {
         "display_name": "Weighted Time Spent Doing IO",
         "units": "ms",
         "max": "MAX_UNSIGNED_LONG",
@@ -231,8 +271,12 @@
         "formula": null,
         "description": "The weighted amount of time processing I/Os that is incremented every time the number of I/Os in progress is updated. The stepwise increment is equal to the number of I/Os in progress multiplied by the number of milliseconds spent doing I/Os since the last time number of I/Os in progress was updated. This can provide an easy measure of both I/O completion time and the backlog that may be accumulating.",
         "notes": "",
-        "source": {
-            "^linux\\skernel$": ["/proc/diskstats"]
+        "platforms": {
+            "linux": {
+                "ubuntu": {
+                    "*": ["/proc/diskstats"]
+                }
+            }
         },
         "device": "dm-|loop|md|ram|sd",
         "vendors": "*",
@@ -242,7 +286,7 @@
             "https://www.kernel.org/doc/Documentation/devices.txt"
         ]
     },
-    "disk.{disk_name}.size": {
+    "disk.size": {
         "display_name": "File System Size",
         "units": "GB",
         "max": null,
@@ -253,8 +297,12 @@
         "formula": null,
         "description": "The total size of the file system.",
         "notes": "This metric is only collected for disk drive names starting with 'sd' in the NMA code.",
-        "source": {
-            "^linux\\skernel$": ["df /dev/{disk_name}"]
+        "platforms": {
+            "linux": {
+                "ubuntu": {
+                    "*": ["df /dev/{disk_name}"]
+                }
+            }
         },
         "device": "sd",
         "vendors": "*",
@@ -265,7 +313,7 @@
             "https://www.kernel.org/doc/Documentation/devices.txt"
         ]
     },
-    "disk.{disk_name}.used": {
+    "disk.used": {
         "display_name": "File System Used",
         "units": "GB",
         "max": null,
@@ -276,8 +324,12 @@
         "formula": null,
         "description": "The amount of space allocated to existing files in the file system.",
         "notes": "This metric is only collected for disk drive names starting with 'sd' in the NMA code. The maximum value is the total size of the file system.",
-        "source": {
-            "^linux\\skernel$": ["df /dev/{disk_name}"]
+        "platforms": {
+            "linux": {
+                "ubuntu": {
+                    "*": ["df /dev/{disk_name}"]
+                }
+            }
         },
         "device": "sd",
         "vendors": "*",
@@ -288,7 +340,7 @@
             "https://www.kernel.org/doc/Documentation/devices.txt"
         ]
     },
-    "disk.{disk_name}.available": {
+    "disk.available": {
         "display_name": "File System Available",
         "units": "GB",
         "max": null,
@@ -299,8 +351,12 @@
         "formula": null,
         "description": "The amount of space available within the file system for the creation of new files by unprivileged users. When this value is less than or equal to zero, it will not be possible to create any new files on the file system without first deleting others, unless the process has appropriate privileges.",
         "notes": "This metric is only collected for disk drive names starting with 'sd' in the NMA code. The maximum value is the total size of the file system. The minimum value can be less than 0.",
-        "source": {
-            "^linux\\skernel$": ["df /dev/{disk_name}"]
+        "platforms": {
+            "linux": {
+                "ubuntu": {
+                    "*": ["df /dev/{disk_name}"]
+                }
+            }
         },
         "device": "sd",
         "vendors": "*",
@@ -311,7 +367,7 @@
             "https://www.kernel.org/doc/Documentation/devices.txt"
         ]
     },
-    "disk.{disk_name}.spaceUtilization": {
+    "disk.spaceUtilization": {
         "display_name": "Disk Space Utilization",
         "units": "utilization",
         "max": 1,
@@ -334,7 +390,7 @@
         },
         "description": "The disk space utilization (used storage divided by total size) for this disk.",
         "notes": "This metric is only calculated for disk drive names starting with 'sd' in the NMA code. The NMA code is dividing by available storage.",
-        "source": null,
+        "platforms": null,
         "device": "sd",
         "vendors": "*",
         "classification": "disk",
@@ -343,8 +399,8 @@
             "https://www.kernel.org/doc/Documentation/devices.txt"
         ]
     },
-    "disk.spaceUtilization": {
-        "display_name": "Average Disk Space Utilization",
+    "disk.meanSpaceUtilization": {
+        "display_name": "Mean Disk Space Utilization",
         "units": "utilization",
         "max": 1,
         "min": 0,
@@ -368,9 +424,9 @@
                 }
             }
         },
-        "description": "The average disk space utilization (used storage divided by total size) across all disks.",
+        "description": "The mean disk space utilization (used storage divided by total size) across all disks.",
         "notes": "This metric is only calculated for disk drive names starting with 'sd' in the NMA code. The NMA code is dividing by available storage.",
-        "source": null,
+        "platforms": null,
         "device": null,
         "vendors": "*",
         "classification": "disk",
@@ -379,7 +435,7 @@
             "https://www.kernel.org/doc/Documentation/devices.txt"
         ]
     },
-    "disk.{disk_name}.timeUtilization": {
+    "disk.timeUtilization": {
         "display_name": "Disk Time Utilization",
         "units": "utilization",
         "max": 1,
@@ -402,7 +458,7 @@
         },
         "description": "The disk time utilization (time spent doing IO divided by system uptime) for this disk.",
         "notes": "",
-        "source": null,
+        "platforms": null,
         "device": "sd",
         "vendors": "*",
         "classification": "disk",
@@ -411,8 +467,8 @@
             "https://www.kernel.org/doc/Documentation/devices.txt"
         ]
     },
-    "disk.timeUtilization": {
-        "display_name": "Average Disk Time Utilization",
+    "disk.meanTimeUtilization": {
+        "display_name": "Mean Disk Time Utilization",
         "units": "utilization",
         "max": 1,
         "min": 0,
@@ -436,9 +492,9 @@
                 }
             }
         },
-        "description": "The average disk time utilization (time spent doing IO divided by system uptime) across all disks.",
+        "description": "The mean disk time utilization (time spent doing IO divided by system uptime) across all disks.",
         "notes": "",
-        "source": null,
+        "platforms": null,
         "device": null,
         "vendors": "*",
         "classification": "disk",
