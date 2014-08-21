@@ -311,8 +311,8 @@
             "https://www.kernel.org/doc/Documentation/devices.txt"
         ]
     },
-    "disk.{disk_name}.utilization": {
-        "display_name": "Disk or Partition Utilization",
+    "disk.{disk_name}.spaceUtilization": {
+        "display_name": "Disk Space Utilization",
         "units": "utilization",
         "max": 1,
         "min": 0,
@@ -322,11 +322,11 @@
         "formula": {
             "equation": "\\frac{disk_{used}}{disk_{size}}",
             "variables": {
-                "disk_used": {
+                "disk_{used}": {
                     "description": "The amount of space used on this disk.",
                     "reference": "https://github.com/doc-metrix/disk"
                 },
-                "disk_size": {
+                "disk_{size}": {
                     "description": "The total amount of space on this disk.",
                     "reference": "https://github.com/doc-metrix/disk"
                 }
@@ -335,7 +335,7 @@
         "description": "The disk space utilization (used storage divided by total size) for this disk.",
         "notes": "This metric is only calculated for disk drive names starting with 'sd' in the NMA code. The NMA code is dividing by available storage.",
         "source": null,
-        "device": "^disk\\.(sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.utilization$",
+        "device": "^disk\\.(sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.spaceUtilization$",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -343,8 +343,8 @@
             "https://www.kernel.org/doc/Documentation/devices.txt"
         ]
     },
-    "disk.utilization": {
-        "display_name": "Average Disk Utilization",
+    "disk.spaceUtilization": {
+        "display_name": "Average Disk Space Utilization",
         "units": "utilization",
         "max": 1,
         "min": 0,
@@ -354,12 +354,80 @@
         "formula": {
             "equation": "\\frac{\\sum_{disks}\\frac{disk_{used}}{disk_{size}}}{n_{disks}}",
             "variables": {
-                "disk_used": {
+                "disk_{used}": {
                     "description": "The amount of space used on this disk.",
                     "reference": "https://github.com/doc-metrix/disk"
                 },
-                "disk_size": {
+                "disk_{size}": {
                     "description": "The total amount of space on this disk.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                },
+                "n_{disks}": {
+                    "description": "The total number of disks.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                }
+            }
+        },
+        "description": "The average disk space utilization (used storage divided by total size) across all disks.",
+        "notes": "This metric is only calculated for disk drive names starting with 'sd' in the NMA code. The NMA code is dividing by available storage.",
+        "source": null,
+        "device": null,
+        "vendors": "*",
+        "classification": "disk",
+        "refs": [
+            "http://linux.die.net/man/1/df",
+            "https://www.kernel.org/doc/Documentation/devices.txt"
+        ]
+    },
+    "disk.{disk_name}.timeUtilization": {
+        "display_name": "Disk Time Utilization",
+        "units": "utilization",
+        "max": 1,
+        "min": 0,
+        "sig_figs": null,
+        "data_type": "percentage",
+        "type": "derived",
+        "formula": {
+            "equation": "\\frac{time_{disk in use}}{time_{uptime}}",
+            "variables": {
+                "time_{disk in use}": {
+                    "description": "The amount of time the disk has spent doing IO since the last reboot.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                },
+                "time_{uptime}": {
+                    "description": "The total amount of time the system has been running since the last reboot.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                }
+            }
+        },
+        "description": "The disk time utilization (time spent doing IO divided by system uptime) for this disk.",
+        "notes": null,
+        "source": null,
+        "device": "^disk\\.(sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.timeUtilization$",
+        "vendors": "*",
+        "classification": "disk",
+        "refs": [
+            "http://linux.die.net/man/1/df",
+            "https://www.kernel.org/doc/Documentation/devices.txt"
+        ]
+    },
+    "disk.timeUtilization": {
+        "display_name": "Average Disk Time Utilization",
+        "units": "utilization",
+        "max": 1,
+        "min": 0,
+        "sig_figs": null,
+        "data_type": "percentage",
+        "type": "derived",
+        "formula": {
+            "equation": "\\frac{\\sum_{disks}\\frac{time_{disk in use}}{time_{uptime}}}{n_{disks}}",
+            "variables": {
+                "time_{disk in use}": {
+                    "description": "The amount of time the disk has spent doing IO since the last reboot.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                },
+                "time_{uptime}": {
+                    "description": "The total amount of time the system has been running since the last reboot.",
                     "reference": "https://github.com/doc-metrix/disk"
                 },
                 "n_disks": {
@@ -368,8 +436,8 @@
                 }
             }
         },
-        "description": "The average disk space utilization (used storage divided by total size) across all disks.",
-        "notes": "This metric is only calculated for disk drive names starting with 'sd' in the NMA code. The NMA code is dividing by available storage.",
+        "description": "The average disk time utilization (time spent doing IO divided by system uptime) across all disks.",
+        "notes": null,
         "source": null,
         "device": null,
         "vendors": "*",
