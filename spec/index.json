@@ -7,7 +7,7 @@
         "sig_figs": null,
         "data_type": "numeric",
         "type": "raw",
-        "formula" : null,
+        "formula": null,
         "description": "The number of inputs and outputs currently in progress. Incremented as requests are submitted and decremented as they finish. This does not include requests that are in queue waiting to be submitted.",
         "notes": "",
         "source": {
@@ -30,7 +30,7 @@
         "sig_figs": null,
         "data_type": "numeric",
         "type": "raw",
-        "formula" : null,
+        "formula": null,
         "description": "The number of reads completed successfully.",
         "notes": "",
         "source": {
@@ -52,7 +52,7 @@
         "sig_figs": null,
         "data_type": "numeric",
         "type": "raw",
-        "formula" : null,
+        "formula": null,
         "description": "The number of adjacent reads merged for read efficiency. For example, two 4K reads may become one 8K read before it is ultimately handed to the disk, and so it will be queued (and counted) as only one I/O.",
         "notes": "",
         "source": {
@@ -74,7 +74,7 @@
         "sig_figs": null,
         "data_type": "numeric",
         "type": "raw",
-        "formula" : null,
+        "formula": null,
         "description": "The number of sectors read successfully.",
         "notes": "",
         "source": {
@@ -96,7 +96,7 @@
         "sig_figs": null,
         "data_type": "numeric",
         "type": "raw",
-        "formula" : null,
+        "formula": null,
         "description": "The number of sectors written successfully.",
         "notes": "",
         "source": {
@@ -118,7 +118,7 @@
         "sig_figs": null,
         "data_type": "time",
         "type": "raw",
-        "formula" : null,
+        "formula": null,
         "description": "The number of milliseconds spent processing IO requests, which increases when number of I/Os in progress is nonzero.",
         "notes": "",
         "source": {
@@ -140,7 +140,7 @@
         "sig_figs": null,
         "data_type": "time",
         "type": "raw",
-        "formula" : null,
+        "formula": null,
         "description": "The number of milliseconds spent by all reads (as measured from __make_request() to end_that_request_last()). There is the possibility that this value will overflow and wrap on a 32-bit system that has been continuously running for a long time.",
         "notes": "",
         "source": {
@@ -162,7 +162,7 @@
         "sig_figs": null,
         "data_type": "time",
         "type": "raw",
-        "formula" : null,
+        "formula": null,
         "description": "The number of milliseconds spent by all writes (as measured from __make_request() to end_that_request_last()). There is the possibility that this value will overflow and wrap on a 32-bit system that has been continuously running for a long time.",
         "notes": "",
         "source": {
@@ -184,7 +184,7 @@
         "sig_figs": null,
         "data_type": "numeric",
         "type": "raw",
-        "formula" : null,
+        "formula": null,
         "description": "The number of writes completed successfully.",
         "notes": "",
         "source": {
@@ -206,7 +206,7 @@
         "sig_figs": null,
         "data_type": "numeric",
         "type": "raw",
-        "formula" : null,
+        "formula": null,
         "description": "The number of adjacent writes merged for write efficiency. For example, two 4K writes may become one 8K write before it is ultimately handed to the disk, and so it will be queued (and counted) as only one I/O.",
         "notes": "",
         "source": {
@@ -228,7 +228,7 @@
         "sig_figs": null,
         "data_type": "time",
         "type": "raw",
-        "formula" : null,
+        "formula": null,
         "description": "The weighted amount of time processing I/Os that is incremented every time the number of I/Os in progress is updated. The stepwise increment is equal to the number of I/Os in progress multiplied by the number of milliseconds spent doing I/Os since the last time number of I/Os in progress was updated. This can provide an easy measure of both I/O completion time and the backlog that may be accumulating.",
         "notes": "",
         "source": {
@@ -250,7 +250,7 @@
         "sig_figs": null,
         "data_type": "numeric",
         "type": "raw",
-        "formula" : null,
+        "formula": null,
         "description": "The total size of the file system.",
         "notes": "This metric is only collected for disk drive names starting with 'sd' in the NMA code.",
         "source": {
@@ -273,7 +273,7 @@
         "sig_figs": null,
         "data_type": "numeric",
         "type": "raw",
-        "formula" : null,
+        "formula": null,
         "description": "The amount of space allocated to existing files in the file system.",
         "notes": "This metric is only collected for disk drive names starting with 'sd' in the NMA code. The maximum value is the total size of the file system.",
         "source": {
@@ -296,7 +296,7 @@
         "sig_figs": null,
         "data_type": "numeric",
         "type": "raw",
-        "formula" : null,
+        "formula": null,
         "description": "The amount of space available within the file system for the creation of new files by unprivileged users. When this value is less than or equal to zero, it will not be possible to create any new files on the file system without first deleting others, unless the process has appropriate privileges.",
         "notes": "This metric is only collected for disk drive names starting with 'sd' in the NMA code. The maximum value is the total size of the file system. The minimum value can be less than 0.",
         "source": {
@@ -319,7 +319,19 @@
         "sig_figs": null,
         "data_type": "percentage",
         "type": "derived",
-        "formula" : "\\frac{disk_{used}}{disk_{size}}",
+        "formula": {
+            "equation": "\\frac{disk_{used}}{disk_{size}}",
+            "variables": {
+                "disk_used": {
+                    "description": "The amount of space used on this disk.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                },
+                "disk_size": {
+                    "description": "The total amount of space on this disk.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                }
+            }
+        },
         "description": "The disk space utilization (used storage divided by total size) for this disk.",
         "notes": "This metric is only calculated for disk drive names starting with 'sd' in the NMA code. The NMA code is dividing by available storage.",
         "source": null,
@@ -339,7 +351,23 @@
         "sig_figs": null,
         "data_type": "percentage",
         "type": "derived",
-        "formula" : "\\frac{\\sum_{disks}\\frac{disk_{used}}{disk_{size}}}{n_{disks}}",
+        "formula": {
+            "equation": "\\frac{\\sum_{disks}\\frac{disk_{used}}{disk_{size}}}{n_{disks}}",
+            "variables": {
+                "disk_used": {
+                    "description": "The amount of space used on this disk.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                },
+                "disk_size": {
+                    "description": "The total amount of space on this disk.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                },
+                "n_disks": {
+                    "description": "The total number of disks.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                }
+            }
+        },
         "description": "The average disk space utilization (used storage divided by total size) across all disks.",
         "notes": "This metric is only calculated for disk drive names starting with 'sd' in the NMA code. The NMA code is dividing by available storage.",
         "source": null,
