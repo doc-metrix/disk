@@ -1,7 +1,7 @@
 {
     "disk.{disk_name}.ioInProgres": {
         "display_name": "IOs in Progress",
-        "units": "number of I/Os in progress",
+        "units": "count",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
         "sig_figs": null,
@@ -24,7 +24,7 @@
     },
     "disk.{disk_name}.readsIssued": {
         "display_name": "Reads Completed",
-        "units": "number of reads completed",
+        "units": "count",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
         "sig_figs": null,
@@ -46,7 +46,7 @@
     },
     "disk.{disk_name}.readsMerged": {
         "display_name": "Reads Merged",
-        "units": "number of reads merged",
+        "units": "count",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
         "sig_figs": null,
@@ -68,7 +68,7 @@
     },
     "disk.{disk_name}.sectorsRead": {
         "display_name": "Sectors Read",
-        "units": "number of sectors read",
+        "units": "count",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
         "sig_figs": null,
@@ -90,7 +90,7 @@
     },
     "disk.{disk_name}.sectorsWriten": {
         "display_name": "Sectors Written",
-        "units": "number of sectors written",
+        "units": "count",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
         "sig_figs": null,
@@ -112,7 +112,7 @@
     },
     "disk.{disk_name}.timeDoingIO": {
         "display_name": "Time Spent Doing IO",
-        "units": "milliseconds",
+        "units": "ms",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
         "sig_figs": null,
@@ -134,7 +134,7 @@
     },
     "disk.{disk_name}.timeReading": {
         "display_name": "Time Spent Reading",
-        "units": "milliseconds",
+        "units": "ms",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
         "sig_figs": null,
@@ -156,7 +156,7 @@
     },
     "disk.{disk_name}.timeWriting": {
         "display_name": "Time Spent Writing",
-        "units": "milliseconds",
+        "units": "ms",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
         "sig_figs": null,
@@ -178,7 +178,7 @@
     },
     "disk.{disk_name}.writesComplted": {
         "display_name": "Writes Completed",
-        "units": "number of writes completed",
+        "units": "count",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
         "sig_figs": null,
@@ -200,7 +200,7 @@
     },
     "disk.{disk_name}.writesMerge": {
         "display_name": "Writes Merged",
-        "units": "number of writes merged",
+        "units": "count",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
         "sig_figs": null,
@@ -222,7 +222,7 @@
     },
     "disk.{disk_name}.weightedTimeDoingIO": {
         "display_name": "Weighted Time Spent Doing IO",
-        "units": "milliseconds",
+        "units": "ms",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
         "sig_figs": null,
