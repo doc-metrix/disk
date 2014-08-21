@@ -401,7 +401,7 @@
             }
         },
         "description": "The disk time utilization (time spent doing IO divided by system uptime) for this disk.",
-        "notes": null,
+        "notes": "",
         "source": null,
         "device": "^disk\\.(sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.timeUtilization$",
         "vendors": "*",
@@ -437,7 +437,7 @@
             }
         },
         "description": "The average disk time utilization (time spent doing IO divided by system uptime) across all disks.",
-        "notes": null,
+        "notes": "",
         "source": null,
         "device": null,
         "vendors": "*",
