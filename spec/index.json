@@ -13,7 +13,7 @@
         "source": {
             "^linux\\skernel$": ["/proc/diskstats"]
         },
-        "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.ioInProgres$",
+        "device": "dm-|loop|md|ram|sd",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -36,7 +36,7 @@
         "source": {
             "^linux\\skernel$": ["/proc/diskstats"]
         },
-        "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.readsIssued$",
+        "device": "dm-|loop|md|ram|sd",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -58,7 +58,7 @@
         "source": {
             "^linux\\skernel$": ["/proc/diskstats"]
         },
-        "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.readsMerged$",
+        "device": "dm-|loop|md|ram|sd",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -80,7 +80,7 @@
         "source": {
             "^linux\\skernel$": ["/proc/diskstats"]
         },
-        "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.sectorsRead$",
+        "device": "dm-|loop|md|ram|sd",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -102,7 +102,7 @@
         "source": {
             "^linux\\skernel$": ["/proc/diskstats"]
         },
-        "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.sectorsWriten$",
+        "device": "dm-|loop|md|ram|sd",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -124,7 +124,7 @@
         "source": {
             "^linux\\skernel$": ["/proc/diskstats"]
         },
-        "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.timeDoingIO$",
+        "device": "dm-|loop|md|ram|sd",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -146,7 +146,7 @@
         "source": {
             "^linux\\skernel$": ["/proc/diskstats"]
         },
-        "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.timeReading$",
+        "device": "dm-|loop|md|ram|sd",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -168,7 +168,7 @@
         "source": {
             "^linux\\skernel$": ["/proc/diskstats"]
         },
-        "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.timeWriting$",
+        "device": "dm-|loop|md|ram|sd",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -190,7 +190,7 @@
         "source": {
             "^linux\\skernel$": ["/proc/diskstats"]
         },
-        "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.writesComplted$",
+        "device": "dm-|loop|md|ram|sd",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -212,7 +212,7 @@
         "source": {
             "^linux\\skernel$": ["/proc/diskstats"]
         },
-        "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.writesMerge$",
+        "device": "dm-|loop|md|ram|sd",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -234,7 +234,7 @@
         "source": {
             "^linux\\skernel$": ["/proc/diskstats"]
         },
-        "device": "^disk\\.(dm-\\d+|loop\\d+|md\\d+|ram([0-9]{1,2}|1[0-9]{2}|2[0-4][0-9]|250)|sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.weightedTimeDoingIO$",
+        "device": "dm-|loop|md|ram|sd",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -256,7 +256,7 @@
         "source": {
             "^linux\\skernel$": ["df /dev/{disk_name}"]
         },
-        "device": "^disk\\.(sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.size$",
+        "device": "sd",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -279,7 +279,7 @@
         "source": {
             "^linux\\skernel$": ["df /dev/{disk_name}"]
         },
-        "device": "^disk\\.(sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.used$",
+        "device": "sd",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -302,7 +302,7 @@
         "source": {
             "^linux\\skernel$": ["df /dev/{disk_name}"]
         },
-        "device": "^disk\\.(sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.available$",
+        "device": "sd",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -335,7 +335,7 @@
         "description": "The disk space utilization (used storage divided by total size) for this disk.",
         "notes": "This metric is only calculated for disk drive names starting with 'sd' in the NMA code. The NMA code is dividing by available storage.",
         "source": null,
-        "device": "^disk\\.(sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.spaceUtilization$",
+        "device": "sd",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -403,7 +403,7 @@
         "description": "The disk time utilization (time spent doing IO divided by system uptime) for this disk.",
         "notes": "",
         "source": null,
-        "device": "^disk\\.(sd[a-p]|sd[a-p]([1-9]|1[0-5]))\\.timeUtilization$",
+        "device": "sd",
         "vendors": "*",
         "classification": "disk",
         "refs": [
