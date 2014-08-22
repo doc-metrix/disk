@@ -17,7 +17,7 @@
                 }
             }
         },
-        "device": "dm-|loop|md|ram|sd",
+        "device": "^(dm-|loop|md|ram|sd)$",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -44,7 +44,7 @@
                 }
             }
         },
-        "device": "dm-|loop|md|ram|sd",
+        "device": "^(dm-|loop|md|ram|sd)$",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -70,7 +70,7 @@
                 }
             }
         },
-        "device": "dm-|loop|md|ram|sd",
+        "device": "^(dm-|loop|md|ram|sd)$",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -96,7 +96,7 @@
                 }
             }
         },
-        "device": "dm-|loop|md|ram|sd",
+        "device": "^(dm-|loop|md|ram|sd)$",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -122,7 +122,7 @@
                 }
             }
         },
-        "device": "dm-|loop|md|ram|sd",
+        "device": "^(dm-|loop|md|ram|sd)$",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -148,7 +148,7 @@
                 }
             }
         },
-        "device": "dm-|loop|md|ram|sd",
+        "device": "^(dm-|loop|md|ram|sd)$",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -174,7 +174,7 @@
                 }
             }
         },
-        "device": "dm-|loop|md|ram|sd",
+        "device": "^(dm-|loop|md|ram|sd)$",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -200,7 +200,7 @@
                 }
             }
         },
-        "device": "dm-|loop|md|ram|sd",
+        "device": "^(dm-|loop|md|ram|sd)$",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -226,7 +226,7 @@
                 }
             }
         },
-        "device": "dm-|loop|md|ram|sd",
+        "device": "^(dm-|loop|md|ram|sd)$",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -252,7 +252,7 @@
                 }
             }
         },
-        "device": "dm-|loop|md|ram|sd",
+        "device": "^(dm-|loop|md|ram|sd)$",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -278,7 +278,7 @@
                 }
             }
         },
-        "device": "dm-|loop|md|ram|sd",
+        "device": "^(dm-|loop|md|ram|sd)$",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -304,7 +304,7 @@
                 }
             }
         },
-        "device": "sd",
+        "device": "^sd$",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -331,7 +331,7 @@
                 }
             }
         },
-        "device": "sd",
+        "device": "^sd$",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -358,7 +358,7 @@
                 }
             }
         },
-        "device": "sd",
+        "device": "^sd$",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -391,7 +391,7 @@
         "description": "The disk space utilization (used storage divided by total size) for this disk.",
         "notes": "This metric is only calculated for disk drive names starting with 'sd' in the NMA code. The NMA code is dividing by available storage.",
         "platforms": null,
-        "device": "sd",
+        "device": "^sd$",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -459,7 +459,7 @@
         "description": "The disk time utilization (time spent doing IO divided by system uptime) for this disk.",
         "notes": "",
         "platforms": null,
-        "device": "sd",
+        "device": "^sd$",
         "vendors": "*",
         "classification": "disk",
         "refs": [
