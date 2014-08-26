@@ -1,11 +1,11 @@
 {
-    "disk.ioInProgres": {
-        "display_name": "I/Os in Progress",
+    "disk.ioInProgress": {
+        "displayName": "I/Os in Progress",
         "units": "I/O",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
-        "sig_figs": null,
-        "data_type": "integer",
+        "sigFigs": null,
+        "dataType": "integer",
         "type": "raw",
         "formula": null,
         "description": "The number of inputs and outputs currently in progress. Incremented as requests are submitted and decremented as they finish. This does not include requests that are in queue waiting to be submitted.",
@@ -27,12 +27,12 @@
         ]
     },
     "disk.readsIssued": {
-        "display_name": "Reads Completed",
+        "displayName": "Reads Completed",
         "units": "disk read",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
-        "sig_figs": null,
-        "data_type": "count",
+        "sigFigs": null,
+        "dataType": "count",
         "type": "raw",
         "formula": null,
         "description": "The number of reads completed successfully.",
@@ -53,12 +53,12 @@
         ]
     },
     "disk.readsMerged": {
-        "display_name": "Reads Merged",
+        "displayName": "Reads Merged",
         "units": "disk read",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
-        "sig_figs": null,
-        "data_type": "count",
+        "sigFigs": null,
+        "dataType": "count",
         "type": "raw",
         "formula": null,
         "description": "The number of adjacent reads merged for read efficiency. For example, two 4K reads may become one 8K read before it is ultimately handed to the disk, and so it will be queued (and counted) as only one I/O.",
@@ -79,12 +79,12 @@
         ]
     },
     "disk.sectorsRead": {
-        "display_name": "Sectors Read",
+        "displayName": "Sectors Read",
         "units": "disk sector",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
-        "sig_figs": null,
-        "data_type": "count",
+        "sigFigs": null,
+        "dataType": "count",
         "type": "raw",
         "formula": null,
         "description": "The number of sectors read successfully.",
@@ -104,13 +104,13 @@
             "https://www.kernel.org/doc/Documentation/devices.txt"
         ]
     },
-    "disk.sectorsWriten": {
-        "display_name": "Sectors Written",
+    "disk.sectorsWritten": {
+        "displayName": "Sectors Written",
         "units": "disk sector",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
-        "sig_figs": null,
-        "data_type": "count",
+        "sigFigs": null,
+        "dataType": "count",
         "type": "raw",
         "formula": null,
         "description": "The number of sectors written successfully.",
@@ -131,12 +131,12 @@
         ]
     },
     "disk.timeDoingIO": {
-        "display_name": "Time Spent Doing IO",
+        "displayName": "Time Spent Doing IO",
         "units": "ms",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
-        "sig_figs": null,
-        "data_type": "time",
+        "sigFigs": null,
+        "dataType": "time",
         "type": "raw",
         "formula": null,
         "description": "The number of milliseconds spent processing IO requests, which increases when number of I/Os in progress is nonzero.",
@@ -157,12 +157,12 @@
         ]
     },
     "disk.timeReading": {
-        "display_name": "Time Spent Reading",
+        "displayName": "Time Spent Reading",
         "units": "ms",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
-        "sig_figs": null,
-        "data_type": "time",
+        "sigFigs": null,
+        "dataType": "time",
         "type": "raw",
         "formula": null,
         "description": "The number of milliseconds spent by all reads (as measured from __make_request() to end_that_request_last()). There is the possibility that this value will overflow and wrap on a 32-bit system that has been continuously running for a long time.",
@@ -183,12 +183,12 @@
         ]
     },
     "disk.timeWriting": {
-        "display_name": "Time Spent Writing",
+        "displayName": "Time Spent Writing",
         "units": "ms",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
-        "sig_figs": null,
-        "data_type": "time",
+        "sigFigs": null,
+        "dataType": "time",
         "type": "raw",
         "formula": null,
         "description": "The number of milliseconds spent by all writes (as measured from __make_request() to end_that_request_last()). There is the possibility that this value will overflow and wrap on a 32-bit system that has been continuously running for a long time.",
@@ -208,13 +208,13 @@
             "https://www.kernel.org/doc/Documentation/devices.txt"
         ]
     },
-    "disk.writesComplted": {
-        "display_name": "Writes Completed",
+    "disk.writesCompleted": {
+        "displayName": "Writes Completed",
         "units": "disk write",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
-        "sig_figs": null,
-        "data_type": "count",
+        "sigFigs": null,
+        "dataType": "count",
         "type": "raw",
         "formula": null,
         "description": "The number of writes completed successfully.",
@@ -235,12 +235,12 @@
         ]
     },
     "disk.writesMerge": {
-        "display_name": "Writes Merged",
+        "displayName": "Writes Merged",
         "units": "disk write",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
-        "sig_figs": null,
-        "data_type": "count",
+        "sigFigs": null,
+        "dataType": "count",
         "type": "raw",
         "formula": null,
         "description": "The number of adjacent writes merged for write efficiency. For example, two 4K writes may become one 8K write before it is ultimately handed to the disk, and so it will be queued (and counted) as only one I/O.",
@@ -261,12 +261,12 @@
         ]
     },
     "disk.weightedTimeDoingIO": {
-        "display_name": "Weighted Time Spent Doing IO",
+        "displayName": "Weighted Time Spent Doing IO",
         "units": "ms",
         "max": "MAX_UNSIGNED_LONG",
         "min": 0,
-        "sig_figs": null,
-        "data_type": "time",
+        "sigFigs": null,
+        "dataType": "time",
         "type": "raw",
         "formula": null,
         "description": "The weighted amount of time processing I/Os that is incremented every time the number of I/Os in progress is updated. The stepwise increment is equal to the number of I/Os in progress multiplied by the number of milliseconds spent doing I/Os since the last time number of I/Os in progress was updated. This can provide an easy measure of both I/O completion time and the backlog that may be accumulating.",
@@ -287,12 +287,12 @@
         ]
     },
     "disk.size": {
-        "display_name": "File System Size",
+        "displayName": "File System Size",
         "units": "GB",
         "max": null,
         "min": null,
-        "sig_figs": null,
-        "data_type": "numeric",
+        "sigFigs": null,
+        "dataType": "numeric",
         "type": "raw",
         "formula": null,
         "description": "The total size of the file system.",
@@ -314,12 +314,12 @@
         ]
     },
     "disk.used": {
-        "display_name": "File System Used",
+        "displayName": "File System Used",
         "units": "GB",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "numeric",
+        "sigFigs": null,
+        "dataType": "numeric",
         "type": "raw",
         "formula": null,
         "description": "The amount of space allocated to existing files in the file system.",
@@ -341,12 +341,12 @@
         ]
     },
     "disk.available": {
-        "display_name": "File System Available",
+        "displayName": "File System Available",
         "units": "GB",
         "max": null,
         "min": null,
-        "sig_figs": null,
-        "data_type": "numeric",
+        "sigFigs": null,
+        "dataType": "numeric",
         "type": "raw",
         "formula": null,
         "description": "The amount of space available within the file system for the creation of new files by unprivileged users. When this value is less than or equal to zero, it will not be possible to create any new files on the file system without first deleting others, unless the process has appropriate privileges.",
@@ -368,12 +368,12 @@
         ]
     },
     "disk.spaceUtilization": {
-        "display_name": "Disk Space Utilization",
+        "displayName": "Disk Space Utilization",
         "units": "utilization",
         "max": 1,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "percentage",
+        "sigFigs": null,
+        "dataType": "percentage",
         "type": "derived",
         "formula": {
             "equation": "\\frac{disk_{used}}{disk_{size}}",
@@ -400,12 +400,12 @@
         ]
     },
     "disk.meanSpaceUtilization": {
-        "display_name": "Mean Disk Space Utilization",
+        "displayName": "Mean Disk Space Utilization",
         "units": "utilization",
         "max": 1,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "percentage",
+        "sigFigs": null,
+        "dataType": "percentage",
         "type": "derived",
         "formula": {
             "equation": "\\frac{\\sum_{disks}\\frac{disk_{used}}{disk_{size}}}{n_{disks}}",
@@ -436,12 +436,12 @@
         ]
     },
     "disk.timeUtilization": {
-        "display_name": "Disk Time Utilization",
+        "displayName": "Disk Time Utilization",
         "units": "utilization",
         "max": 1,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "percentage",
+        "sigFigs": null,
+        "dataType": "percentage",
         "type": "derived",
         "formula": {
             "equation": "\\frac{time_{disk in use}}{time_{uptime}}",
@@ -468,12 +468,12 @@
         ]
     },
     "disk.meanTimeUtilization": {
-        "display_name": "Mean Disk Time Utilization",
+        "displayName": "Mean Disk Time Utilization",
         "units": "utilization",
         "max": 1,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "percentage",
+        "sigFigs": null,
+        "dataType": "percentage",
         "type": "derived",
         "formula": {
             "equation": "\\frac{\\sum_{disks}\\frac{time_{disk in use}}{time_{uptime}}}{n_{disks}}",
@@ -504,12 +504,12 @@
         ]
     },
     "disk.readRate": {
-        "display_name": "Disk Read Rate",
+        "displayName": "Disk Read Rate",
         "units": "bytes/s",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "numeric",
+        "sigFigs": null,
+        "dataType": "numeric",
         "type": "derived",
         "formula": {
             "equation": "\\frac{sector_{read}*sector_{size}}{t_{reading}}",
@@ -541,12 +541,12 @@
         ]
     },
     "disk.meanReadRate": {
-        "display_name": "Mean Disk Read Rate",
+        "displayName": "Mean Disk Read Rate",
         "units": "bytes/s",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "numeric",
+        "sigFigs": null,
+        "dataType": "numeric",
         "type": "derived",
         "formula": {
             "equation": "\\frac{\\sum_{disks}\\frac{sector_{read}*sector_{size}}{t_{reading}}}{n_{disks}}",
@@ -582,12 +582,12 @@
         ]
     },
     "disk.writeRate": {
-        "display_name": "Disk Write Rate",
+        "displayName": "Disk Write Rate",
         "units": "bytes/s",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "numeric",
+        "sigFigs": null,
+        "dataType": "numeric",
         "type": "derived",
         "formula": {
             "equation": "\\frac{sector_{written}*sector_{size}}{t_{writing}}",
@@ -619,12 +619,12 @@
         ]
     },
     "disk.meanWriteRate": {
-        "display_name": "Mean Disk Write Rate",
+        "displayName": "Mean Disk Write Rate",
         "units": "bytes/s",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "numeric",
+        "sigFigs": null,
+        "dataType": "numeric",
         "type": "derived",
         "formula": {
             "equation": "\\frac{\\sum_{disks}\\frac{sector_{written}*sector_{size}}{t_{writing}}}{n_{disks}}",
@@ -660,12 +660,12 @@
         ]
     },
     "disk.readWriteRatio": {
-        "display_name": "Disk Read Write Ratio",
+        "displayName": "Disk Read Write Ratio",
         "units": null,
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "numeric",
+        "sigFigs": null,
+        "dataType": "numeric",
         "type": "derived",
         "formula": {
             "equation": "\\frac{sector_{read}}{sector_{written}}",
@@ -693,12 +693,12 @@
         ]
     },
     "disk.meanReadWriteRatio": {
-        "display_name": "Mean Disk Read Write Ratio",
+        "displayName": "Mean Disk Read Write Ratio",
         "units": "bytes/s",
         "max": null,
         "min": 0,
-        "sig_figs": null,
-        "data_type": "numeric",
+        "sigFigs": null,
+        "dataType": "numeric",
         "type": "derived",
         "formula": {
             "equation": "\\frac{\\sum_{disks}\\frac{sector_{read}}{sector_{written}}}{n_{disks}}",
