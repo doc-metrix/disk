@@ -459,7 +459,7 @@
         "description": "The disk time utilization (time spent doing IO divided by system uptime) for this disk.",
         "notes": "",
         "platforms": null,
-        "device": "^sd$",
+        "device": "^(dm-|loop|md|ram|sd)$",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -501,6 +501,232 @@
         "refs": [
             "http://linux.die.net/man/1/df",
             "https://www.kernel.org/doc/Documentation/devices.txt"
+        ]
+    },
+    "disk.readRate": {
+        "display_name": "Disk Read Rate",
+        "units": "bytes/s",
+        "max": null,
+        "min": 0,
+        "sig_figs": null,
+        "data_type": "numeric",
+        "type": "derived",
+        "formula": {
+            "equation": "\\frac{sector_{read}*sector_{size}}{t_{reading}}",
+            "variables": {
+                "sector_{read}": {
+                    "description": "The total number of sectors read on this disk since the last reboot.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                },
+                "sector_{size}": {
+                    "description": "The size of a logical sector on this disk.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                },
+                "t_{reading}": {
+                    "description": "The amount of time this disk spent reading since the last reboot.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                }
+            }
+        },
+        "description": "The rate of data read on this disk since the last reboot.",
+        "notes": "",
+        "platforms": null,
+        "device": "^(dm-|loop|md|ram|sd)$",
+        "vendors": "*",
+        "classification": "disk",
+        "refs": [
+            "http://linux.die.net/man/1/df",
+            "https://www.kernel.org/doc/Documentation/devices.txt",
+            "http://unix.stackexchange.com/questions/2668/finding-the-sector-size-of-a-partition"
+        ]
+    },
+    "disk.meanReadRate": {
+        "display_name": "Mean Disk Read Rate",
+        "units": "bytes/s",
+        "max": null,
+        "min": 0,
+        "sig_figs": null,
+        "data_type": "numeric",
+        "type": "derived",
+        "formula": {
+            "equation": "\\frac{\\sum_{disks}\\frac{sector_{read}*sector_{size}}{t_{reading}}}{n_{disks}}",
+            "variables": {
+                "sector_{read}": {
+                    "description": "The total number of sectors read on this disk since the last reboot.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                },
+                "sector_{size}": {
+                    "description": "The size of a logical sector on this disk.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                },
+                "t_{reading}": {
+                    "description": "The amount of time this disk spent reading since the last reboot.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                },
+                "n_disks": {
+                    "description": "The total number of disks.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                }
+            }
+        },
+        "description": "The mean rate of data read across all disks since the last reboot.",
+        "notes": "",
+        "platforms": null,
+        "device": null,
+        "vendors": "*",
+        "classification": "disk",
+        "refs": [
+            "http://linux.die.net/man/1/df",
+            "https://www.kernel.org/doc/Documentation/devices.txt",
+            "http://unix.stackexchange.com/questions/2668/finding-the-sector-size-of-a-partition"
+        ]
+    },
+    "disk.writeRate": {
+        "display_name": "Disk Write Rate",
+        "units": "bytes/s",
+        "max": null,
+        "min": 0,
+        "sig_figs": null,
+        "data_type": "numeric",
+        "type": "derived",
+        "formula": {
+            "equation": "\\frac{sector_{written}*sector_{size}}{t_{writing}}",
+            "variables": {
+                "sector_{written}": {
+                    "description": "The total number of sectors written on this disk since the last reboot.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                },
+                "sector_{size}": {
+                    "description": "The size of a logical sector on this disk.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                },
+                "t_{writing}": {
+                    "description": "The amount of time this disk spent writing since the last reboot.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                }
+            }
+        },
+        "description": "The rate of data written on this disk since the last reboot.",
+        "notes": "",
+        "platforms": null,
+        "device": "^(dm-|loop|md|ram|sd)$",
+        "vendors": "*",
+        "classification": "disk",
+        "refs": [
+            "http://linux.die.net/man/1/df",
+            "https://www.kernel.org/doc/Documentation/devices.txt",
+            "http://unix.stackexchange.com/questions/2668/finding-the-sector-size-of-a-partition"
+        ]
+    },
+    "disk.meanWriteRate": {
+        "display_name": "Mean Disk Write Rate",
+        "units": "bytes/s",
+        "max": null,
+        "min": 0,
+        "sig_figs": null,
+        "data_type": "numeric",
+        "type": "derived",
+        "formula": {
+            "equation": "\\frac{\\sum_{disks}\\frac{sector_{written}*sector_{size}}{t_{writing}}}{n_{disks}}",
+            "variables": {
+                "sector_{written}": {
+                    "description": "The total number of sectors written on this disk since the last reboot.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                },
+                "sector_{size}": {
+                    "description": "The size of a logical sector on this disk.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                },
+                "t_{writing}": {
+                    "description": "The amount of time this disk spent writing since the last reboot.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                },
+                "n_disks": {
+                    "description": "The total number of disks.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                }
+            }
+        },
+        "description": "The mean rate of data written across all disks since the last reboot.",
+        "notes": "",
+        "platforms": null,
+        "device": null,
+        "vendors": "*",
+        "classification": "disk",
+        "refs": [
+            "http://linux.die.net/man/1/df",
+            "https://www.kernel.org/doc/Documentation/devices.txt",
+            "http://unix.stackexchange.com/questions/2668/finding-the-sector-size-of-a-partition"
+        ]
+    },
+    "disk.readWriteRatio": {
+        "display_name": "Disk Read Write Ratio",
+        "units": null,
+        "max": null,
+        "min": 0,
+        "sig_figs": null,
+        "data_type": "numeric",
+        "type": "derived",
+        "formula": {
+            "equation": "\\frac{sector_{read}}{sector_{written}}",
+            "variables": {
+                "sector_{read}": {
+                    "description": "The total number of sectors read on this disk since the last reboot.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                },
+                "sector_{written}": {
+                    "description": "The total number of sectors written on this disk since the last reboot.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                }
+            }
+        },
+        "description": "The ratio of data read divided by data written on this disk since the last reboot.",
+        "notes": "",
+        "platforms": null,
+        "device": "^(dm-|loop|md|ram|sd)$",
+        "vendors": "*",
+        "classification": "disk",
+        "refs": [
+            "http://linux.die.net/man/1/df",
+            "https://www.kernel.org/doc/Documentation/devices.txt",
+            "http://unix.stackexchange.com/questions/2668/finding-the-sector-size-of-a-partition"
+        ]
+    },
+    "disk.meanReadWriteRatio": {
+        "display_name": "Mean Disk Read Write Ratio",
+        "units": "bytes/s",
+        "max": null,
+        "min": 0,
+        "sig_figs": null,
+        "data_type": "numeric",
+        "type": "derived",
+        "formula": {
+            "equation": "\\frac{\\sum_{disks}\\frac{sector_{read}}{sector_{written}}}{n_{disks}}",
+            "variables": {
+                "sector_{read}": {
+                    "description": "The total number of sectors read on this disk since the last reboot.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                },
+                "sector_{written}": {
+                    "description": "The total number of sectors written on this disk since the last reboot.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                },
+                "n_disks": {
+                    "description": "The total number of disks.",
+                    "reference": "https://github.com/doc-metrix/disk"
+                }
+            }
+        },
+        "description": "The mean ratio of data read divided by data written across all disks since the last reboot.",
+        "notes": "",
+        "platforms": null,
+        "device": null,
+        "vendors": "*",
+        "classification": "disk",
+        "refs": [
+            "http://linux.die.net/man/1/df",
+            "https://www.kernel.org/doc/Documentation/devices.txt",
+            "http://unix.stackexchange.com/questions/2668/finding-the-sector-size-of-a-partition"
         ]
     }
 }
