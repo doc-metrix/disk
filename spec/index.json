@@ -457,7 +457,7 @@
     },
     "disk.readRate": {
         "displayName": "Disk Read Rate",
-        "units": "bytes/s",
+        "units": "MB/s",
         "max": null,
         "min": 0,
         "sigFigs": null,
@@ -496,7 +496,7 @@
     },
     "disk.meanReadRate": {
         "displayName": "Mean Disk Read Rate",
-        "units": "bytes/s",
+        "units": "MB/s",
         "max": null,
         "min": 0,
         "sigFigs": null,
@@ -539,7 +539,7 @@
     },
     "disk.writeRate": {
         "displayName": "Disk Write Rate",
-        "units": "bytes/s",
+        "units": "MB/s",
         "max": null,
         "min": 0,
         "sigFigs": null,
@@ -578,7 +578,7 @@
     },
     "disk.meanWriteRate": {
         "displayName": "Mean Disk Write Rate",
-        "units": "bytes/s",
+        "units": "MB/s",
         "max": null,
         "min": 0,
         "sigFigs": null,
@@ -656,7 +656,7 @@
     },
     "disk.meanReadWriteRatio": {
         "displayName": "Mean Disk Read Write Ratio",
-        "units": "bytes/s",
+        "units": null,
         "max": null,
         "min": 0,
         "sigFigs": null,
