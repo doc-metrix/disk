@@ -13,7 +13,7 @@
         "platforms": {
             "linux": ["/proc/diskstats"]
         },
-        "device": "^(dm-|loop|md|ram|sd)$",
+        "device": "disks prefixed with 'dm-', 'loop', 'md', 'ram', and 'sd'",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -36,7 +36,7 @@
         "platforms": {
             "linux": ["/proc/diskstats"]
         },
-        "device": "^(dm-|loop|md|ram|sd)$",
+        "device": "disks prefixed with 'dm-', 'loop', 'md', 'ram', and 'sd'",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -58,7 +58,7 @@
         "platforms": {
             "linux": ["/proc/diskstats"]
         },
-        "device": "^(dm-|loop|md|ram|sd)$",
+        "device": "disks prefixed with 'dm-', 'loop', 'md', 'ram', and 'sd'",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -80,7 +80,7 @@
         "platforms": {
             "linux": ["/proc/diskstats"]
         },
-        "device": "^(dm-|loop|md|ram|sd)$",
+        "device": "disks prefixed with 'dm-', 'loop', 'md', 'ram', and 'sd'",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -102,7 +102,7 @@
         "platforms": {
             "linux": ["/proc/diskstats"]
         },
-        "device": "^(dm-|loop|md|ram|sd)$",
+        "device": "disks prefixed with 'dm-', 'loop', 'md', 'ram', and 'sd'",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -124,7 +124,7 @@
         "platforms": {
             "linux": ["/proc/diskstats"]
         },
-        "device": "^(dm-|loop|md|ram|sd)$",
+        "device": "disks prefixed with 'dm-', 'loop', 'md', 'ram', and 'sd'",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -146,7 +146,7 @@
         "platforms": {
             "linux": ["/proc/diskstats"]
         },
-        "device": "^(dm-|loop|md|ram|sd)$",
+        "device": "disks prefixed with 'dm-', 'loop', 'md', 'ram', and 'sd'",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -168,7 +168,7 @@
         "platforms": {
             "linux": ["/proc/diskstats"]
         },
-        "device": "^(dm-|loop|md|ram|sd)$",
+        "device": "disks prefixed with 'dm-', 'loop', 'md', 'ram', and 'sd'",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -190,7 +190,7 @@
         "platforms": {
             "linux": ["/proc/diskstats"]
         },
-        "device": "^(dm-|loop|md|ram|sd)$",
+        "device": "disks prefixed with 'dm-', 'loop', 'md', 'ram', and 'sd'",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -212,7 +212,7 @@
         "platforms": {
             "linux": ["/proc/diskstats"]
         },
-        "device": "^(dm-|loop|md|ram|sd)$",
+        "device": "disks prefixed with 'dm-', 'loop', 'md', 'ram', and 'sd'",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -234,7 +234,7 @@
         "platforms": {
             "linux": ["/proc/diskstats"]
         },
-        "device": "^(dm-|loop|md|ram|sd)$",
+        "device": "disks prefixed with 'dm-', 'loop', 'md', 'ram', and 'sd'",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -256,7 +256,7 @@
         "platforms": {
             "linux": ["df /dev/{diskName}"]
         },
-        "device": "^sd$",
+        "device": "disks prefixed with 'sd'",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -279,7 +279,7 @@
         "platforms": {
             "linux": ["df /dev/{diskName}"]
         },
-        "device": "^sd$",
+        "device": "disks prefixed with 'sd'",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -302,7 +302,7 @@
         "platforms": {
             "linux": ["df /dev/{diskName}"]
         },
-        "device": "^sd$",
+        "device": "disks prefixed with 'sd'",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -337,7 +337,7 @@
         "platforms": {
             "linux": ["df /dev/{diskName}"]
         },
-        "device": "^sd$",
+        "device": "disks prefixed with 'sd'",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -409,7 +409,7 @@
         "platforms": {
             "linux": ["/proc/diskstats", "/proc/uptime"]
         },
-        "device": "^(dm-|loop|md|ram|sd)$",
+        "device": "disks prefixed with 'dm-', 'loop', 'md', 'ram', and 'sd'",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -485,7 +485,7 @@
         "platforms": {
             "linux": ["/proc/diskstats", "/sys/block/{diskName}/queue/logical_block_size"]
         },
-        "device": "^(dm-|loop|md|ram|sd)$",
+        "device": "disks prefixed with 'dm-', 'loop', 'md', 'ram', and 'sd'",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -567,7 +567,7 @@
         "platforms": {
             "linux": ["/proc/diskstats", "/sys/block/{diskName}/queue/logical_block_size"]
         },
-        "device": "^(dm-|loop|md|ram|sd)$",
+        "device": "disks prefixed with 'dm-', 'loop', 'md', 'ram', and 'sd'",
         "vendors": "*",
         "classification": "disk",
         "refs": [
@@ -645,7 +645,7 @@
         "platforms": {
             "linux": ["/proc/diskstats"]
         },
-        "device": "^(dm-|loop|md|ram|sd)$",
+        "device": "disks prefixed with 'dm-', 'loop', 'md', 'ram', and 'sd'",
         "vendors": "*",
         "classification": "disk",
         "refs": [
