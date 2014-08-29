@@ -345,8 +345,8 @@
             "https://www.kernel.org/doc/Documentation/devices.txt"
         ]
     },
-    "disk.meanSpaceUtilization": {
-        "displayName": "Mean Disk Space Utilization",
+    "disk.spaceUtilizationAverage": {
+        "displayName": "Average Disk Space Utilization",
         "units": "utilization",
         "max": 1,
         "min": 0,
@@ -370,7 +370,7 @@
                 }
             }
         },
-        "description": "The mean disk space utilization (used storage divided by total size) across all disks.",
+        "description": "The average disk space utilization (used storage divided by total size) across all disks.",
         "notes": "This metric is only calculated for disk drive names starting with 'sd' in the NMA code. The NMA code is dividing by available storage.",
         "platforms": {
             "linux": ["df /dev/{diskName}"]
@@ -417,8 +417,8 @@
             "https://www.kernel.org/doc/Documentation/devices.txt"
         ]
     },
-    "disk.meanTimeUtilization": {
-        "displayName": "Mean Disk Time Utilization",
+    "disk.timeUtilizationAverage": {
+        "displayName": "Average Disk Time Utilization",
         "units": "utilization",
         "max": 1,
         "min": 0,
@@ -442,7 +442,7 @@
                 }
             }
         },
-        "description": "The mean disk time utilization (time spent doing IO divided by system uptime) across all disks.",
+        "description": "The average disk time utilization (time spent doing IO divided by system uptime) across all disks.",
         "notes": "",
         "platforms": {
             "linux": ["/proc/diskstats", "/proc/uptime"]
@@ -494,8 +494,8 @@
             "http://unix.stackexchange.com/questions/2668/finding-the-sector-size-of-a-partition"
         ]
     },
-    "disk.meanReadRate": {
-        "displayName": "Mean Disk Read Rate",
+    "disk.readRateAverage": {
+        "displayName": "Average Disk Read Rate",
         "units": "MB/s",
         "max": null,
         "min": 0,
@@ -523,7 +523,7 @@
                 }
             }
         },
-        "description": "The mean of data read divided by time spent reading across all disks since the last reboot.",
+        "description": "The average of data read divided by time spent reading across all disks since the last reboot.",
         "notes": "",
         "platforms": {
             "linux": ["/proc/diskstats", "/sys/block/{diskName}/queue/logical_block_size"]
@@ -576,8 +576,8 @@
             "http://unix.stackexchange.com/questions/2668/finding-the-sector-size-of-a-partition"
         ]
     },
-    "disk.meanWriteRate": {
-        "displayName": "Mean Disk Write Rate",
+    "disk.writeRateAverage": {
+        "displayName": "Average Disk Write Rate",
         "units": "MB/s",
         "max": null,
         "min": 0,
@@ -605,7 +605,7 @@
                 }
             }
         },
-        "description": "The mean of data written divided by time spent writing across all disks since the last reboot.",
+        "description": "The average of data written divided by time spent writing across all disks since the last reboot.",
         "notes": "",
         "platforms": {
             "linux": ["/proc/diskstats", "/sys/block/{diskName}/queue/logical_block_size"]
@@ -654,8 +654,8 @@
             "http://unix.stackexchange.com/questions/2668/finding-the-sector-size-of-a-partition"
         ]
     },
-    "disk.meanReadWriteRatio": {
-        "displayName": "Mean Disk Read Write Ratio",
+    "disk.readWriteRatioAverage": {
+        "displayName": "Average Disk Read Write Ratio",
         "units": null,
         "max": null,
         "min": 0,
@@ -679,7 +679,7 @@
                 }
             }
         },
-        "description": "The mean ratio of data read divided by data written across all disks since the last reboot.",
+        "description": "The average ratio of data read divided by data written across all disks since the last reboot.",
         "notes": "",
         "platforms": {
             "linux": ["/proc/diskstats"]
