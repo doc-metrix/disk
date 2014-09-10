@@ -8,7 +8,7 @@
         "dataType": "integer",
         "type": "raw",
         "formula": null,
-        "description": "The number of inputs and outputs currently in progress. The metric is incremented as requests are submitted and decremented as they finish. The metric does not include requests that are in queue waiting to be submitted.",
+        "description": "The number of inputs and outputs currently in progress. The metric is incremented as requests are submitted and decremented as requests finish. The metric does not include requests that are in queue waiting to be submitted.",
         "notes": "",
         "platforms": {
             "linux": ["/proc/diskstats"]

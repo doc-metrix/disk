@@ -8,7 +8,7 @@ Disk
 
 #### [disk.ioInProgress](https://www.kernel.org/doc/Documentation/iostats.txt)
 
-The number of inputs and outputs currently in progress. The metric is incremented as requests are submitted and decremented as they finish. The metric does not include requests that are in queue waiting to be submitted.
+The number of inputs and outputs currently in progress. The metric is incremented as requests are submitted and decremented as requests finish. The metric does not include requests that are in queue waiting to be submitted.
 
 Min | Max | Units | Metric Type | Data Type 
 :---: | :---: | :---: | ---: | ---: |
@@ -314,6 +314,10 @@ $ bower update doc-metrix-disk
 
 
 ### Utilities
+
+List of utilities using this specification:
+
+*	[Node.js Module](https://github.com/doc-metrix/disk-node)
 
 
 ---
