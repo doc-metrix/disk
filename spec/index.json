@@ -198,7 +198,7 @@
             "https://www.kernel.org/doc/Documentation/devices.txt"
         ]
     },
-    "writesMerged": {
+    "disk.writesMerged": {
         "displayName": "Writes Merged",
         "units": "writes",
         "max": "MAX_UNSIGNED_LONG",
@@ -464,7 +464,7 @@
         "dataType": "numeric",
         "type": "derived",
         "formula": {
-            "equation": "\\frac{sector_{read}*sector_{size}}{t_{reading}}",
+            "equation": "\\frac{sector_{read}*sector_{size}}{1000*t_{reading}}",
             "variables": {
                 "sector_{read}": {
                     "description": "The total number of sectors read on an individual disk since the last reboot.",
@@ -503,7 +503,7 @@
         "dataType": "numeric",
         "type": "derived",
         "formula": {
-            "equation": "\\frac{\\sum_{disks}\\frac{sector_{read}*sector_{size}}{t_{reading}}}{n_{disks}}",
+            "equation": "\\frac{\\sum_{disks}\\frac{sector_{read}*sector_{size}}{1000*t_{reading}}}{n_{disks}}",
             "variables": {
                 "sector_{read}": {
                     "description": "The total number of sectors read on an individual disk since the last reboot.",
@@ -546,7 +546,7 @@
         "dataType": "numeric",
         "type": "derived",
         "formula": {
-            "equation": "\\frac{sector_{written}*sector_{size}}{t_{writing}}",
+            "equation": "\\frac{sector_{written}*sector_{size}}{1000*t_{writing}}",
             "variables": {
                 "sector_{written}": {
                     "description": "The total number of sectors written on an individual disk since the last reboot.",
@@ -585,7 +585,7 @@
         "dataType": "numeric",
         "type": "derived",
         "formula": {
-            "equation": "\\frac{\\sum_{disks}\\frac{sector_{written}*sector_{size}}{t_{writing}}}{n_{disks}}",
+            "equation": "\\frac{\\sum_{disks}\\frac{sector_{written}*sector_{size}}{1000*t_{writing}}}{n_{disks}}",
             "variables": {
                 "sector_{written}": {
                     "description": "The total number of sectors written on an individual disk since the last reboot.",
