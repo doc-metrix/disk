@@ -244,7 +244,7 @@
     },
     "disk.size": {
         "displayName": "File System Size",
-        "units": "GB",
+        "units": "GiB",
         "max": null,
         "min": 0,
         "sigFigs": null,
@@ -252,9 +252,9 @@
         "type": "raw",
         "formula": null,
         "description": "The total size of the file system.",
-        "notes": "",
+        "notes": "The unit is converted to GiB if not already reported in this unit.",
         "platforms": {
-            "linux": ["df /dev/{diskName}"]
+            "linux": ["df -Ph /dev/{diskName}"]
         },
         "device": ["sd"],
         "vendors": "*",
@@ -267,7 +267,7 @@
     },
     "disk.used": {
         "displayName": "File System Used",
-        "units": "GB",
+        "units": "GiB",
         "max": null,
         "min": 0,
         "sigFigs": null,
@@ -275,9 +275,9 @@
         "type": "raw",
         "formula": null,
         "description": "The amount of disk space allocated to existing files in the file system.",
-        "notes": "The maximum value is the total size of the file system.",
+        "notes": "The maximum value is the total size of the file system. The unit is converted to GiB if not already reported in this unit.",
         "platforms": {
-            "linux": ["df /dev/{diskName}"]
+            "linux": ["df -Ph /dev/{diskName}"]
         },
         "device": ["sd"],
         "vendors": "*",
@@ -290,7 +290,7 @@
     },
     "disk.available": {
         "displayName": "File System Available",
-        "units": "GB",
+        "units": "GiB",
         "max": null,
         "min": null,
         "sigFigs": null,
@@ -298,9 +298,9 @@
         "type": "raw",
         "formula": null,
         "description": "The amount of space available within the file system for the creation of new files by unprivileged users. When this value is less than or equal to zero, it will not be possible to create any new files on the file system without first deleting others, unless the process has appropriate privileges.",
-        "notes": "The maximum value is the total size of the file system. The minimum value can be less than 0.",
+        "notes": "The maximum value is the total size of the file system. The minimum value can be less than 0. The unit is converted to GiB if not already reported in this unit.",
         "platforms": {
-            "linux": ["df /dev/{diskName}"]
+            "linux": ["df -Ph /dev/{diskName}"]
         },
         "device": ["sd"],
         "vendors": "*",
