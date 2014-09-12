@@ -436,7 +436,7 @@
                     "description": "the total amount of time the system has been running since the last reboot",
                     "reference": "https://github.com/doc-metrix/disk"
                 },
-                "n_disks": {
+                "n_{disks}": {
                     "description": "the total number of disks",
                     "reference": "https://github.com/doc-metrix/disk"
                 }
