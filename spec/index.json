@@ -517,7 +517,7 @@
                     "description": "the amount of time an individual disk spent reading since the last reboot",
                     "reference": "https://github.com/doc-metrix/disk"
                 },
-                "n_disks": {
+                "n_{disks}": {
                     "description": "the total number of disks",
                     "reference": "https://github.com/doc-metrix/disk"
                 }
@@ -599,7 +599,7 @@
                     "description": "the amount of time an individual disk spent writing since the last reboot",
                     "reference": "https://github.com/doc-metrix/disk"
                 },
-                "n_disks": {
+                "n_{disks}": {
                     "description": "the total number of disks",
                     "reference": "https://github.com/doc-metrix/disk"
                 }
@@ -673,7 +673,7 @@
                     "description": "the total number of sectors written on an individual disk since the last reboot",
                     "reference": "https://github.com/doc-metrix/disk"
                 },
-                "n_disks": {
+                "n_{disks}": {
                     "description": "the total number of disks",
                     "reference": "https://github.com/doc-metrix/disk"
                 }
