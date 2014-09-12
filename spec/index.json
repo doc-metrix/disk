@@ -354,18 +354,18 @@
         "dataType": "percentage",
         "type": "derived",
         "formula": {
-            "equation": "\\frac{\\sum_{disks}\\frac{disk_{used}}{disk_{size}}}{n_{disks}}",
+            "equation": "\\frac{1}{n_{disk}}\\sum_{disks}\\frac{disk_{used}}{disk_{size}}",
             "variables": {
                 "disk_{used}": {
-                    "description": "The amount of space used on an individual disk.",
+                    "description": "the amount of space used on an individual disk",
                     "reference": "https://github.com/doc-metrix/disk"
                 },
                 "disk_{size}": {
-                    "description": "The total amount of space on an individual disk.",
+                    "description": "the total amount of space on an individual disk",
                     "reference": "https://github.com/doc-metrix/disk"
                 },
                 "n_{disks}": {
-                    "description": "The total number of disks.",
+                    "description": "the total number of disks",
                     "reference": "https://github.com/doc-metrix/disk"
                 }
             }
@@ -426,18 +426,18 @@
         "dataType": "percentage",
         "type": "derived",
         "formula": {
-            "equation": "\\frac{\\sum_{disks}\\frac{time_{disk in use}}{time_{uptime}}}{n_{disks}}",
+            "equation": "\\frac{1}{n_{disks}}\\sum_{disks}\\frac{time_{disk in use}}{time_{uptime}}",
             "variables": {
                 "time_{disk in use}": {
-                    "description": "The amount of time the disk has spent doing IO since the last reboot.",
+                    "description": "the amount of time the disk has spent doing IO since the last reboot",
                     "reference": "https://github.com/doc-metrix/disk"
                 },
                 "time_{uptime}": {
-                    "description": "The total amount of time the system has been running since the last reboot.",
+                    "description": "the total amount of time the system has been running since the last reboot",
                     "reference": "https://github.com/doc-metrix/disk"
                 },
                 "n_disks": {
-                    "description": "The total number of disks.",
+                    "description": "the total number of disks",
                     "reference": "https://github.com/doc-metrix/disk"
                 }
             }
@@ -467,15 +467,15 @@
             "equation": "\\frac{sector_{read}*sector_{size}}{1000*t_{reading}}",
             "variables": {
                 "sector_{read}": {
-                    "description": "The total number of sectors read on an individual disk since the last reboot.",
+                    "description": "the total number of sectors read on an individual disk since the last reboot",
                     "reference": "https://github.com/doc-metrix/disk"
                 },
                 "sector_{size}": {
-                    "description": "The size of a logical sector on an individual disk.",
+                    "description": "the size of a logical sector on an individual disk",
                     "reference": "https://github.com/doc-metrix/disk"
                 },
                 "t_{reading}": {
-                    "description": "The amount of time an individual disk spent reading since the last reboot.",
+                    "description": "the amount of time an individual disk spent reading since the last reboot",
                     "reference": "https://github.com/doc-metrix/disk"
                 }
             }
@@ -503,22 +503,22 @@
         "dataType": "numeric",
         "type": "derived",
         "formula": {
-            "equation": "\\frac{\\sum_{disks}\\frac{sector_{read}*sector_{size}}{1000*t_{reading}}}{n_{disks}}",
+            "equation": "\\frac{1}{n_{disks}}\\sum_{disks}\\frac{sector_{read}*sector_{size}}{1000*t_{reading}}",
             "variables": {
                 "sector_{read}": {
-                    "description": "The total number of sectors read on an individual disk since the last reboot.",
+                    "description": "the total number of sectors read on an individual disk since the last reboot",
                     "reference": "https://github.com/doc-metrix/disk"
                 },
                 "sector_{size}": {
-                    "description": "The size of a logical sector on an individual disk.",
+                    "description": "the size of a logical sector on an individual disk",
                     "reference": "https://github.com/doc-metrix/disk"
                 },
                 "t_{reading}": {
-                    "description": "The amount of time an individual disk spent reading since the last reboot.",
+                    "description": "the amount of time an individual disk spent reading since the last reboot",
                     "reference": "https://github.com/doc-metrix/disk"
                 },
                 "n_disks": {
-                    "description": "The total number of disks.",
+                    "description": "the total number of disks",
                     "reference": "https://github.com/doc-metrix/disk"
                 }
             }
@@ -549,15 +549,15 @@
             "equation": "\\frac{sector_{written}*sector_{size}}{1000*t_{writing}}",
             "variables": {
                 "sector_{written}": {
-                    "description": "The total number of sectors written on an individual disk since the last reboot.",
+                    "description": "the total number of sectors written on an individual disk since the last reboot",
                     "reference": "https://github.com/doc-metrix/disk"
                 },
                 "sector_{size}": {
-                    "description": "The size of a logical sector on an individual disk.",
+                    "description": "the size of a logical sector on an individual disk",
                     "reference": "https://github.com/doc-metrix/disk"
                 },
                 "t_{writing}": {
-                    "description": "The amount of time an individual disk spent writing since the last reboot.",
+                    "description": "the amount of time an individual disk spent writing since the last reboot",
                     "reference": "https://github.com/doc-metrix/disk"
                 }
             }
@@ -585,22 +585,22 @@
         "dataType": "numeric",
         "type": "derived",
         "formula": {
-            "equation": "\\frac{\\sum_{disks}\\frac{sector_{written}*sector_{size}}{1000*t_{writing}}}{n_{disks}}",
+            "equation": "\\frac{1}{n_{disks}}\\sum_{disks}\\frac{sector_{written}*sector_{size}}{1000*t_{writing}}",
             "variables": {
                 "sector_{written}": {
-                    "description": "The total number of sectors written on an individual disk since the last reboot.",
+                    "description": "the total number of sectors written on an individual disk since the last reboot",
                     "reference": "https://github.com/doc-metrix/disk"
                 },
                 "sector_{size}": {
-                    "description": "The size of a logical sector on an individual disk.",
+                    "description": "the size of a logical sector on an individual disk",
                     "reference": "https://github.com/doc-metrix/disk"
                 },
                 "t_{writing}": {
-                    "description": "The amount of time an individual disk spent writing since the last reboot.",
+                    "description": "the amount of time an individual disk spent writing since the last reboot",
                     "reference": "https://github.com/doc-metrix/disk"
                 },
                 "n_disks": {
-                    "description": "The total number of disks.",
+                    "description": "the total number of disks",
                     "reference": "https://github.com/doc-metrix/disk"
                 }
             }
@@ -631,11 +631,11 @@
             "equation": "\\frac{sector_{read}}{sector_{written}}",
             "variables": {
                 "sector_{read}": {
-                    "description": "The total number of sectors read on an individual disk since the last reboot.",
+                    "description": "the total number of sectors read on an individual disk since the last reboot",
                     "reference": "https://github.com/doc-metrix/disk"
                 },
                 "sector_{written}": {
-                    "description": "The total number of sectors written on an individual disk since the last reboot.",
+                    "description": "the total number of sectors written on an individual disk since the last reboot",
                     "reference": "https://github.com/doc-metrix/disk"
                 }
             }
@@ -663,18 +663,18 @@
         "dataType": "numeric",
         "type": "derived",
         "formula": {
-            "equation": "\\frac{\\sum_{disks}\\frac{sector_{read}}{sector_{written}}}{n_{disks}}",
+            "equation": "\\frac{1}{n_{disks}}\\sum_{disks}\\frac{sector_{read}}{sector_{written}}",
             "variables": {
                 "sector_{read}": {
-                    "description": "The total number of sectors read on individual disk since the last reboot.",
+                    "description": "the total number of sectors read on individual disk since the last reboot",
                     "reference": "https://github.com/doc-metrix/disk"
                 },
                 "sector_{written}": {
-                    "description": "The total number of sectors written on an individual disk since the last reboot.",
+                    "description": "the total number of sectors written on an individual disk since the last reboot",
                     "reference": "https://github.com/doc-metrix/disk"
                 },
                 "n_disks": {
-                    "description": "The total number of disks.",
+                    "description": "the total number of disks",
                     "reference": "https://github.com/doc-metrix/disk"
                 }
             }
