@@ -13,8 +13,14 @@
         "platforms": {
             "linux": ["/proc/diskstats"]
         },
-        "device": ["dm-", "loop", "md", "ram", "sd"],
-        "vendors": "*",
+        "device": [
+            "dm-\\d+",
+            "loop\\d+",
+            "md\\d+",
+            "ram\\d+",
+            "sd[a-z]",
+            "sd[a-z]\\d+"
+        ],
         "classification": "disk",
         "refs": [
             "https://www.kernel.org/doc/Documentation/iostats.txt",
@@ -36,8 +42,14 @@
         "platforms": {
             "linux": ["/proc/diskstats"]
         },
-        "device": ["dm-", "loop", "md", "ram", "sd"],
-        "vendors": "*",
+        "device": [
+            "dm-\\d+",
+            "loop\\d+",
+            "md\\d+",
+            "ram\\d+",
+            "sd[a-z]",
+            "sd[a-z]\\d+"
+        ],
         "classification": "disk",
         "refs": [
             "https://www.kernel.org/doc/Documentation/iostats.txt",
@@ -58,8 +70,14 @@
         "platforms": {
             "linux": ["/proc/diskstats"]
         },
-        "device": ["dm-", "loop", "md", "ram", "sd"],
-        "vendors": "*",
+        "device": [
+            "dm-\\d+",
+            "loop\\d+",
+            "md\\d+",
+            "ram\\d+",
+            "sd[a-z]",
+            "sd[a-z]\\d+"
+        ],
         "classification": "disk",
         "refs": [
             "https://www.kernel.org/doc/Documentation/iostats.txt",
@@ -80,8 +98,14 @@
         "platforms": {
             "linux": ["/proc/diskstats"]
         },
-        "device": ["dm-", "loop", "md", "ram", "sd"],
-        "vendors": "*",
+        "device": [
+            "dm-\\d+",
+            "loop\\d+",
+            "md\\d+",
+            "ram\\d+",
+            "sd[a-z]",
+            "sd[a-z]\\d+"
+        ],
         "classification": "disk",
         "refs": [
             "https://www.kernel.org/doc/Documentation/iostats.txt",
@@ -102,8 +126,14 @@
         "platforms": {
             "linux": ["/proc/diskstats"]
         },
-        "device": ["dm-", "loop", "md", "ram", "sd"],
-        "vendors": "*",
+        "device": [
+            "dm-\\d+",
+            "loop\\d+",
+            "md\\d+",
+            "ram\\d+",
+            "sd[a-z]",
+            "sd[a-z]\\d+"
+        ],
         "classification": "disk",
         "refs": [
             "https://www.kernel.org/doc/Documentation/iostats.txt",
@@ -124,8 +154,14 @@
         "platforms": {
             "linux": ["/proc/diskstats"]
         },
-        "device": ["dm-", "loop", "md", "ram", "sd"],
-        "vendors": "*",
+        "device": [
+            "dm-\\d+",
+            "loop\\d+",
+            "md\\d+",
+            "ram\\d+",
+            "sd[a-z]",
+            "sd[a-z]\\d+"
+        ],
         "classification": "disk",
         "refs": [
             "https://www.kernel.org/doc/Documentation/iostats.txt",
@@ -146,8 +182,14 @@
         "platforms": {
             "linux": ["/proc/diskstats"]
         },
-        "device": ["dm-", "loop", "md", "ram", "sd"],
-        "vendors": "*",
+        "device": [
+            "dm-\\d+",
+            "loop\\d+",
+            "md\\d+",
+            "ram\\d+",
+            "sd[a-z]",
+            "sd[a-z]\\d+"
+        ],
         "classification": "disk",
         "refs": [
             "https://www.kernel.org/doc/Documentation/iostats.txt",
@@ -168,8 +210,14 @@
         "platforms": {
             "linux": ["/proc/diskstats"]
         },
-        "device": ["dm-", "loop", "md", "ram", "sd"],
-        "vendors": "*",
+        "device": [
+            "dm-\\d+",
+            "loop\\d+",
+            "md\\d+",
+            "ram\\d+",
+            "sd[a-z]",
+            "sd[a-z]\\d+"
+        ],
         "classification": "disk",
         "refs": [
             "https://www.kernel.org/doc/Documentation/iostats.txt",
@@ -190,8 +238,14 @@
         "platforms": {
             "linux": ["/proc/diskstats"]
         },
-        "device": ["dm-", "loop", "md", "ram", "sd"],
-        "vendors": "*",
+        "device": [
+            "dm-\\d+",
+            "loop\\d+",
+            "md\\d+",
+            "ram\\d+",
+            "sd[a-z]",
+            "sd[a-z]\\d+"
+        ],
         "classification": "disk",
         "refs": [
             "https://www.kernel.org/doc/Documentation/iostats.txt",
@@ -212,8 +266,14 @@
         "platforms": {
             "linux": ["/proc/diskstats"]
         },
-        "device": ["dm-", "loop", "md", "ram", "sd"],
-        "vendors": "*",
+        "device": [
+            "dm-\\d+",
+            "loop\\d+",
+            "md\\d+",
+            "ram\\d+",
+            "sd[a-z]",
+            "sd[a-z]\\d+"
+        ],
         "classification": "disk",
         "refs": [
             "https://www.kernel.org/doc/Documentation/iostats.txt",
@@ -234,8 +294,14 @@
         "platforms": {
             "linux": ["/proc/diskstats"]
         },
-        "device": ["dm-", "loop", "md", "ram", "sd"],
-        "vendors": "*",
+        "device": [
+            "dm-\\d+",
+            "loop\\d+",
+            "md\\d+",
+            "ram\\d+",
+            "sd[a-z]",
+            "sd[a-z]\\d+"
+        ],
         "classification": "disk",
         "refs": [
             "https://www.kernel.org/doc/Documentation/iostats.txt",
@@ -256,8 +322,9 @@
         "platforms": {
             "linux": ["df -Ph /dev/{diskName}"]
         },
-        "device": ["sd"],
-        "vendors": "*",
+        "device": [
+            "sd[a-z]"
+        ],
         "classification": "disk",
         "refs": [
             "http://linux.die.net/man/1/df",
@@ -279,8 +346,9 @@
         "platforms": {
             "linux": ["df -Ph /dev/{diskName}"]
         },
-        "device": ["sd"],
-        "vendors": "*",
+        "device": [
+            "sd[a-z]"
+        ],
         "classification": "disk",
         "refs": [
             "http://linux.die.net/man/1/df",
@@ -302,8 +370,9 @@
         "platforms": {
             "linux": ["df -Ph /dev/{diskName}"]
         },
-        "device": ["sd"],
-        "vendors": "*",
+        "device": [
+            "sd[a-z]"
+        ],
         "classification": "disk",
         "refs": [
             "http://linux.die.net/man/1/df",
@@ -337,8 +406,9 @@
         "platforms": {
             "linux": ["df /dev/{diskName}"]
         },
-        "device": ["sd"],
-        "vendors": "*",
+        "device": [
+            "sd[a-z]"
+        ],
         "classification": "disk",
         "refs": [
             "http://linux.die.net/man/1/df",
@@ -376,7 +446,6 @@
             "linux": ["df /dev/{diskName}"]
         },
         "device": null,
-        "vendors": "*",
         "classification": "disk",
         "refs": [
             "http://linux.die.net/man/1/df",
@@ -409,8 +478,14 @@
         "platforms": {
             "linux": ["/proc/diskstats", "/proc/uptime"]
         },
-        "device": ["dm-", "loop", "md", "ram", "sd"],
-        "vendors": "*",
+        "device": [
+            "dm-\\d+",
+            "loop\\d+",
+            "md\\d+",
+            "ram\\d+",
+            "sd[a-z]",
+            "sd[a-z]\\d+"
+        ],
         "classification": "disk",
         "refs": [
             "http://linux.die.net/man/1/df",
@@ -448,7 +523,6 @@
             "linux": ["/proc/diskstats", "/proc/uptime"]
         },
         "device": null,
-        "vendors": "*",
         "classification": "disk",
         "refs": [
             "http://linux.die.net/man/1/df",
@@ -485,8 +559,14 @@
         "platforms": {
             "linux": ["/proc/diskstats", "/sys/block/{diskName}/queue/logical_block_size"]
         },
-        "device": ["dm-", "loop", "md", "ram", "sd"],
-        "vendors": "*",
+        "device": [
+            "dm-\\d+",
+            "loop\\d+",
+            "md\\d+",
+            "ram\\d+",
+            "sd[a-z]",
+            "sd[a-z]\\d+"
+        ],
         "classification": "disk",
         "refs": [
             "http://linux.die.net/man/1/df",
@@ -529,7 +609,6 @@
             "linux": ["/proc/diskstats", "/sys/block/{diskName}/queue/logical_block_size"]
         },
         "device": null,
-        "vendors": "*",
         "classification": "disk",
         "refs": [
             "http://linux.die.net/man/1/df",
@@ -567,8 +646,14 @@
         "platforms": {
             "linux": ["/proc/diskstats", "/sys/block/{diskName}/queue/logical_block_size"]
         },
-        "device": ["dm-", "loop", "md", "ram", "sd"],
-        "vendors": "*",
+        "device": [
+            "dm-\\d+",
+            "loop\\d+",
+            "md\\d+",
+            "ram\\d+",
+            "sd[a-z]",
+            "sd[a-z]\\d+"
+        ],
         "classification": "disk",
         "refs": [
             "http://linux.die.net/man/1/df",
@@ -611,7 +696,6 @@
             "linux": ["/proc/diskstats", "/sys/block/{diskName}/queue/logical_block_size"]
         },
         "device": null,
-        "vendors": "*",
         "classification": "disk",
         "refs": [
             "http://linux.die.net/man/1/df",
@@ -645,8 +729,14 @@
         "platforms": {
             "linux": ["/proc/diskstats"]
         },
-        "device": ["dm-", "loop", "md", "ram", "sd"],
-        "vendors": "*",
+        "device": [
+            "dm-\\d+",
+            "loop\\d+",
+            "md\\d+",
+            "ram\\d+",
+            "sd[a-z]",
+            "sd[a-z]\\d+"
+        ],
         "classification": "disk",
         "refs": [
             "http://linux.die.net/man/1/df",
@@ -685,7 +775,6 @@
             "linux": ["/proc/diskstats"]
         },
         "device": null,
-        "vendors": "*",
         "classification": "disk",
         "refs": [
             "http://linux.die.net/man/1/df",
