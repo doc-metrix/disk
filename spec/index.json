@@ -8,7 +8,7 @@
         "dataType": "integer",
         "type": "raw",
         "formula": null,
-        "description": "The number of inputs and outputs currently in progress. The metric is incremented as requests are submitted and decremented as requests finish. The metric does not include requests that are in queue waiting to be submitted.",
+        "description": "The number of I/O operations currently in progress. The metric is incremented as requests are submitted and decremented as requests finish. The metric does not include requests that are in queue waiting to be submitted.",
         "notes": "",
         "platforms": {
             "linux": ["/proc/diskstats"]
@@ -392,10 +392,10 @@
             "equation": "\\frac{disk_{used}}{disk_{size}}",
             "variables": {
                 "disk_{used}": {
-                    "description": "The amount of space used on an individual disk."
+                    "description": "the amount of space used on an individual disk."
                 },
                 "disk_{size}": {
-                    "description": "The total amount of space on an individual disk."
+                    "description": "the total amount of space on an individual disk."
                 }
             }
         },
@@ -682,7 +682,7 @@
     "disk.readWriteRatio": {
         "displayName": "Disk Read Write Ratio",
         "units": null,
-        "max": "inf",
+        "max": null,
         "min": 0,
         "sigFigs": null,
         "dataType": "numeric",
@@ -721,7 +721,7 @@
     "disk.readWriteRatioAverage": {
         "displayName": "Average Disk Read Write Ratio",
         "units": null,
-        "max": "inf",
+        "max": null,
         "min": 0,
         "sigFigs": null,
         "dataType": "numeric",
