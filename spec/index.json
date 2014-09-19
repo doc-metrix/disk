@@ -466,7 +466,7 @@
                 }
             }
         },
-        "description": "The percentage of time a particular disk spent performing I/O operations during a measurement interval.",
+        "description": "The disk time utilization (time spent doing I/O operations in a measurement interval divided by that interval) for an individual disk",
         "notes": "",
         "platforms": {
             "linux": ["/proc/diskstats"]
@@ -507,7 +507,7 @@
                 }
             }
         },
-        "description": "The average percentage of time spent performing I/O operations in a measurement interval across all disks.",
+        "description": "The average disk time utilization (time spent doing I/O operations in a measurement interval divided by that interval) across all disks.",
         "notes": "",
         "platforms": {
             "linux": ["/proc/diskstats"]
