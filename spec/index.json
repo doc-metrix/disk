@@ -682,7 +682,7 @@
     "disk.readWriteRatio": {
         "displayName": "Disk Read Write Ratio",
         "units": null,
-        "max": null,
+        "max": "INF",
         "min": 0,
         "sigFigs": null,
         "dataType": "numeric",
@@ -721,7 +721,7 @@
     "disk.readWriteRatioAverage": {
         "displayName": "Average Disk Read Write Ratio",
         "units": null,
-        "max": null,
+        "max": "INF",
         "min": 0,
         "sigFigs": null,
         "dataType": "numeric",
