@@ -461,22 +461,20 @@
         "dataType": "percentage",
         "type": "derived",
         "formula": {
-            "equation": "\\frac{time_{disk in use}}{time_{uptime}}",
+            "equation": "\\frac{\\Delta t_{DiskInUse}}{\\Delta t}",
             "variables": {
-                "time_{disk in use}": {
-                    "description": "The amount of time the disk has spent doing IO since the last reboot.",
-                    "reference": "https://github.com/doc-metrix/disk"
+                "\\Delta t_{DiskInUse}": {
+                    "description": "the amount of time the disk spent performing I/O operations during a measurement interval"
                 },
-                "time_{uptime}": {
-                    "description": "The total amount of time the system has been running since the last reboot.",
-                    "reference": "https://github.com/doc-metrix/disk"
+                "\\Delta t": {
+                    "description": "the measurement interval"
                 }
             }
         },
-        "description": "The disk time utilization (time spent doing IO divided by system uptime) for an individual disk.",
+        "description": "The percentage of time a particular disk spent performing I/O operations during a measurement interval.",
         "notes": "",
         "platforms": {
-            "linux": ["/proc/diskstats", "/proc/uptime"]
+            "linux": ["/proc/diskstats"]
         },
         "devices": [
             "dm-\\d+",
@@ -501,26 +499,23 @@
         "dataType": "percentage",
         "type": "derived",
         "formula": {
-            "equation": "\\frac{1}{n_{disks}}\\sum_{disks}\\frac{time_{disk in use}}{time_{uptime}}",
+            "equation": "\\frac{1}{n_{disks}}\\sum_{disks}\\frac{\\Delta t_{DiskInUse}}{\\Delta t}",
             "variables": {
-                "time_{disk in use}": {
-                    "description": "the amount of time the disk has spent doing IO since the last reboot",
-                    "reference": "https://github.com/doc-metrix/disk"
+                "\\Delta t_{DiskInUse}": {
+                    "description": "the amount of time the disk spent performing I/O operations during a measurement interval"
                 },
-                "time_{uptime}": {
-                    "description": "the total amount of time the system has been running since the last reboot",
-                    "reference": "https://github.com/doc-metrix/disk"
+                "\\Delta t": {
+                    "description": "the measurement interval"
                 },
                 "n_{disks}": {
-                    "description": "the total number of disks",
-                    "reference": "https://github.com/doc-metrix/disk"
+                    "description": "the total number of disks"
                 }
             }
         },
-        "description": "The average disk time utilization (time spent doing IO divided by system uptime) across all disks.",
+        "description": "The average percentage of time spent performing I/O operations in a measurement interval across all disks.",
         "notes": "",
         "platforms": {
-            "linux": ["/proc/diskstats", "/proc/uptime"]
+            "linux": ["/proc/diskstats"]
         },
         "devices": null,
         "classification": "disk",
