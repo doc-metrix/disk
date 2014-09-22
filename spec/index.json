@@ -392,10 +392,10 @@
             "equation": "\\frac{disk_{used}}{disk_{size}}",
             "variables": {
                 "disk_{used}": {
-                    "description": "the amount of space used on an individual disk."
+                    "description": "the amount of space used on an individual disk"
                 },
                 "disk_{size}": {
-                    "description": "the total amount of space on an individual disk."
+                    "description": "the total amount of space on an individual disk"
                 }
             }
         },
