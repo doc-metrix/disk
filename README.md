@@ -8,7 +8,7 @@ Disk
 
 #### [disk.ioInProgress](https://www.kernel.org/doc/Documentation/iostats.txt)
 
-The number of inputs and outputs currently in progress. The metric is incremented as requests are submitted and decremented as requests finish. The metric does not include requests that are in queue waiting to be submitted.
+The number of I/O operations currently in progress. The metric is incremented as requests are submitted and decremented as requests finish. The metric does not include requests that are in queue waiting to be submitted.
 
 Min | Max | Units | Metric Type | Data Type 
 :---: | :---: | :---: | ---: | ---: |
@@ -169,7 +169,7 @@ Min | Max | Units | Metric Type | Data Type
 
 #### [disk.timeUtilization](http://linux.die.net/man/1/df)
 
-The disk time utilization (time spent doing IO divided by system uptime) for an individual disk.
+The disk time utilization (time spent doing I/O operations in a measurement interval divided by that interval) for an individual disk.
 
 Min | Max | Units | Metric Type | Data Type 
 :---: | :---: | :---: | ---: | ---: |
@@ -179,7 +179,7 @@ Min | Max | Units | Metric Type | Data Type
 
 #### [disk.timeUtilizationAverage](http://linux.die.net/man/1/df)
 
-The average disk time utilization (time spent doing IO divided by system uptime) across all disks.
+The average disk time utilization (time spent doing I/O operations in a measurement interval divided by that interval) across all disks.
 
 Min | Max | Units | Metric Type | Data Type 
 :---: | :---: | :---: | ---: | ---: |
