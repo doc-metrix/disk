@@ -1,21 +1,20 @@
 {
   "name": "doc-metrix-disk",
   "version": "0.0.0",
-  "description": "A specification for disk performance metrics.",
+  "description": "Documentation for disk performance metrics.",
   "authors": [
     {
       "name": "Nick Wei",
       "email": "nick@nodeprime.com"
     }
   ],
-  "main": "spec/index.json",
+  "main": "doc/index.json",
   "repository": {
     "type": "git",
     "url": "git://github.com/doc-metrix/disk.git"
   },
   "keywords": [
     "doc-metrix",
-    "specification",
     "disk",
     "metrics",
     "documentation"
